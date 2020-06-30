@@ -1,0 +1,188 @@
+#window {
+    margin-top: 7.5%;
+    width: 1200px;
+    min-height: 500px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to top, #e7f5ff, #ffffff);
+}
+
+#applicants {
+    /* display: none; */
+}
+
+#career-head {
+    font-family: SFProDisplay;
+    font-size: 70px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1971c2;
+}
+
+.btn.select{
+    float: right;
+    margin-top: 20px;
+    border: none;
+    width: 300px;
+    height: 50px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #51cf66;
+    color:#ffffff;font-weight: bold;font-family: SFProDisplay;font-size: 20px;
+}
+
+.btn.edit {
+    float: left;
+    margin: 20px;
+    border: none;
+    width: 450px;
+    height: 100px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    border: solid 2px #353535;
+    background-color: #ffffff;
+    color:#353535;font-weight: bold;font-family: SFProDisplay;font-size: 20px;
+}
+
+.btn.delete {
+    float: right;
+    margin: 20px;
+    border: none;
+    width: 450px;
+    height: 100px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    border: none;
+    background-color: #f03e3e;
+    color:white;font-weight: bold;font-family: SFProDisplay;font-size: 20px;
+}
+
+.btn:hover {
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transition: all 0.1s;
+    transform: translateY(3px);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#sidebar {
+    position: fixed;
+    width: 100%;
+    margin-top: 10%;
+    height: 200px;
+}
+
+#sidebarin {
+    height: 100%;
+    text-align: right;
+    border-right: 10px solid #1971c2;
+}
+
+.sidebar-options {
+    padding-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.52;
+    letter-spacing: normal;
+    color: #1971c2;
+}
+
+#appl {
+    color: white;
+    background-color: #1971c2;
+}
+
+#all-applicants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#this-applicant {
+    background-color: #4dabf7;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.candy-name {
+    display: block;
+    font-family: SFProDisplay;
+    font-size: 30px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.candy-mail {
+    font-family: SFProDisplay;
+    font-size: 25px;
+    font-weight: lighter;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: 1.05px;
+    text-align: left;
+    color: #353535;
+    opacity: 0.8;
+}
+
+.candy-score {
+    /* padding-right: 20px; */
+    margin-top: 5px;
+    overflow-y: hidden;
+    font-family: SFProDisplay;
+    font-size: 40px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 40px;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fbfdff;
+}
+
+.resumebtn:hover {
+    opacity: 0.8;
+}
+
+.footsection {
+    /* position: fixed; */
+    margin-top: 10%;
+    background-color: #f8f9fa;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#credit {
+    font-family: SFProDisplay;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: bold;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1864ab;
+    opacity: 0.5;
+}

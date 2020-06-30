@@ -1,0 +1,208 @@
+#masthead {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #e7f5ff 176%, #ffffff -64%);
+    border-bottom-right-radius: 650px 440px;
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.16);    
+}
+
+#darwin-way-head {
+    width: 587px;
+    height: 95px;
+    font-family: SFProDisplay;
+    font-size: 70px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1971c2;
+}
+
+#darwin-way {
+    font-family: SFProDisplay;
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: left;
+    color: #353535;
+}
+
+.lowsection {
+    min-height: 1500px; 
+    position: relative;
+    bottom: 100px;
+    box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to bottom, #e7f5ff -21%, #ffffff 64%);
+    border-top-left-radius: 25% 10%;
+}
+
+#darwin-mid-head {
+    margin-left: 75px;
+    font-family: SFProDisplay;
+    font-size: 70px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1971c2;
+}
+
+#why-us {
+    font-family: SFProDisplay;
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: center;
+    color: #353535;
+}
+
+#midsection-female {
+    width: 100px;
+    padding-top: 10%;
+    padding-left: 10%;
+}
+
+#midsection-male {
+    padding-top: 10%;
+}
+
+#what-want-head {
+    /* margin-left: 0px; */
+    font-family: SFProDisplay;
+    font-size: 70px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: right;
+    color: #1971c2;
+}
+
+#what-want {
+    font-family: SFProDisplay;
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: right;
+    color: #353535;
+}
+
+#career-section {
+    width: 83.5%;
+}
+
+#career-head {
+    margin-top: 15%;
+    margin-left: 4%;
+    font-family: SFProDisplay;
+    font-size: 70px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1971c2;
+}
+
+.jobcard {
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    background-color: #d0ebff;
+}
+
+.jobtitle {
+    font-family: SFProDisplay;
+    font-size: 27.5px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: bold;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: #353535;
+}
+
+.joblocation {
+    font-family: SFProDisplay;
+    font-size: 25px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.18;
+    letter-spacing: normal;
+    text-align: left;
+    color: #353535;
+}
+
+.applybutton {
+    float: right;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: SFProDisplay;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #353535;
+}
+
+.altdet {
+    display: none;   
+}
+
+.jobcard:hover {
+    background-color: #aecde8;
+}
+
+.jobcard:hover .defaultdet {
+    display: none;
+}
+
+.jobcard:hover .altdet {
+    display: block;
+}
+
+.footsection {
+    /* overflow: hidden; */
+    position: relative;
+    background-color: #f8f9fa;
+    /* height: 150px; */
+    bottom: 100px;
+    margin-bottom: -100px;
+    text-align: center;
+}
+
+#credit {
+    font-family: SFProDisplay;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: bold;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1864ab;
+    opacity: 0.5;
+}

@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <!-- Title -->
+    <title>Admin - Login</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='Assets/Logo-wo Name.svg') }}" type="image/gif" sizes="16x16">    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_login.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="{{ url_for('static', filename='Assets/Logo-w Name.svg') }}" height="50px" width="250px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="homepage.html"><span style="color: #1971c2; font-size: x-large;">Not an admin?</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Panel -->
+    <div class="container" id="login_panel">
+        <div class="form-holder">
+            <form action="admin" method="POST">
+                <div class="input_div">
+                    <input id="email" name="email" placeholder="username" style="width: 100%; background: none;" required>
+                </div>
+                <div class="input_div">
+                    <input id="password" name="password" type="password" placeholder="password" style="width: 100%; background: none;" required>
+                </div>
+                <div class="submit_div">
+                    <button type="submit" class="login-btn">LOG IN</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="fluid-container mid-section footsection" id="footer">
+        <div class="row">
+            
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Mihir Singh</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/mihirs16"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/mihir-singh-456a5916a/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/cached_cadet"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:mihirs16@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>   
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Yashasvi Misra</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/yashasvimisra2798"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/yashasvi-misra-094511165/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/MisraYashasvi"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:misrayashasvi@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Siddhant Thakur</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/sidthakur08"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/siddhant-thakur-08/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/sidtweetsnow"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:siddhantthakur08@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Shushrut Sharma</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/shushrutsharma"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/shushrut-kumar-3a793814a"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/shushrut_sharma?s=09"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:shushrut.ss.sharma@gmail.com "><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="justify-content: center; background-color: #1971c2; height: 45px;">
+            <div style="padding: 7.5px">
+                <span style="font-family: SFProDisplay;font-size: 25px;font-weight: 300;font-style: bold;line-height: 1.21;color: white;">
+                    Made with ❤ by team Blueprint
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

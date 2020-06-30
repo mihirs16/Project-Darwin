@@ -1,0 +1,174 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <!-- Title -->
+    <title>Admin - Applicants</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='Assets/Logo-wo Name.svg') }}" type="image/gif" sizes="16x16">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='job_applicants.css') }}">
+    <!-- Custom Js -->
+    <script src="{{ url_for('static', filename='job_applicants.js') }}"></script>    
+</head>
+<body onload="loadCandidateList();">
+    <!-- Meta Data -->
+    <div id="meta" style="display: none;">
+        {{ jobid }}
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="{{ url_for('static', filename='Assets/Logo-w Name.svg') }}" height="50px" width="250px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="http://localhost:5000/billboard"><span style="color: #1971c2; font-size: x-large;">All Jobs</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="http://localhost:5000/logout"><span style="color: #1971c2; font-size: x-large;">Log Out</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="row" style="height: 100%;">
+            <div class="col">
+                <div id="sidebarin">
+                    <div class="sidebar-options" id="appl">
+                        All Applicants
+                    </div>
+                    <div class="sidebar-options" id="dash">
+                        Dashboard
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div style="width: 1090px;"></div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <!-- Applicants -->
+    <div class="container" id="window">
+        <div id="applicants">
+            <div class="row mt-5 p-3">
+                <div class="col-7">
+                    <h1 id="career-head">Frontend Developer</h1>
+                </div>
+                <div class="col-5">
+                    <button type="submit" class="btn select">SELECT TOP CANDIDATES</button>
+                </div>
+            </div>
+            <div class="container" id="all-applicants">
+                
+                <div style="display: none;">
+                    <div class="row p-3" id="this-applicant">
+                        <div class="col">
+                            <span class="candy-name">Patricia Carrol</span>
+                            <span class="candy-mail">andreea.estradia@gmail.com</span>
+                        </div>
+                        <div class="col-1 p-2 resumebtn">
+                            <img src="{{ url_for('static', filename='Assets/Resume.svg') }}" width="auto" height="50px">
+                        </div>
+                        <div class="col-1 p-2" id="mailbtn">
+                            <img src="{{ url_for('static', filename='Assets/candy_email.svg') }}" style="margin-top: 5px;" width="auto" height="40px">
+                        </div>
+                        <div class="col-1 pt-2 pl-1 pr-0">
+                            <div class="candy-score">93%</div>
+                        </div>
+                    </div>
+                </div>    
+                
+            </div>
+        </div>
+        <div id="dashboard">
+
+        </div>
+        <form action="">
+            <button class="btn edit">
+                EDIT JOB DETAILS
+            </button>
+            <button class="btn delete">
+                EDIT JOB DETAILS
+            </button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="fluid-container mid-section footsection" id="footer">
+        <div class="row">
+            
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Mihir Singh</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/mihirs16"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/mihir-singh-456a5916a/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/cached_cadet"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:mihirs16@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>   
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Yashasvi Misra</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/yashasvimisra2798"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/yashasvi-misra-094511165/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/MisraYashasvi"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:misrayashasvi@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Siddhant Thakur</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/sidthakur08"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/siddhant-thakur-08/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/sidtweetsnow"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:siddhantthakur08@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Shushrut Sharma</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/shushrutsharma"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/shushrut-kumar-3a793814a"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/shushrut_sharma?s=09"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:shushrut.ss.sharma@gmail.com "><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="justify-content: center; background-color: #1971c2; height: 45px;">
+            <div style="padding: 7.5px">
+                <span style="font-family: SFProDisplay;font-size: 25px;font-weight: 300;font-style: bold;line-height: 1.21;color: white;">
+                    Made with ❤ by team Blueprint
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

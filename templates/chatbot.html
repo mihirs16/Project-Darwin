@@ -1,0 +1,171 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Title -->
+    <title>Admin - Chatbot</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='Assets/Logo-wo Name.svg') }}" type="image/gif" sizes="16x16">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='chatbot.css') }}">
+    <!-- Custom Js -->
+    <script src="{{ url_for('static', filename='chatbot.js') }}"></script>  
+</head>
+<body onload="greet()">
+    <!-- Meta -->
+    <div id="data" style="display: none;">
+        {{ jobid }}
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="{{ url_for('static', filename='Assets/Logo-w Name.svg') }}" height="50px" width="250px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#darwin-mid-head"><span style="color: #1971c2; font-size: x-large;">Why Us?</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#what-want-head"><span style="color: #1971c2; font-size: x-large;">What we want</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#career-head"><span style="color: #1971c2; font-size: x-large;">Careers</span></a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chatbot -->
+    <div class="container" id="window">
+        <div class="container" id="chatwindow">
+            <div id="dialogueTemplate" style="display: none;">
+                <div class="row mt-2 bot_dialogue">
+                    <div class="col-auto dp" style="height: 100%;">
+                        <img src="{{ url_for('static', filename='Assets/ChatBot-Full.svg') }}" height="75px" width="75px">
+                    </div>
+                    <div class="col-auto pt-4">
+                        <div class="row no-gutters">
+                            <div class="col-auto">
+                                <img src="{{ url_for('static', filename='Assets/bot_bubble.svg') }}" height="15px" width="15px">
+                            </div>
+                            <div class="col-auto">
+                                <div class="dialogue bot">
+                                    Hey what's up! I am Darwin, and I will be handling your interview today! Isn't it just a lovely day? What would you indulge yourself in on such a beautiful day?
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2 justify-content-end user_dialogue">
+                    <div class="col-auto pt-4">
+                        <div class="row no-gutters">
+                            <div class="col-auto">
+                                <div class="dialogue user">
+                                    Hey what's up!
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <img src="{{ url_for('static', filename='Assets/user_bubble.svg') }}" height="15px" width="15px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-auto dp" style="height: 100%;">
+                        <img src="{{ url_for('static', filename='Assets/User.svg') }}" height="75px" width="75px">
+                    </div>
+                </div>
+           </div>
+        </div>
+        <div class="row mb-5 mt-5 justify-content-center">
+            <div id="message">
+                <form style="margin: 0;">
+                    <input type="text" placeholder="type a message" maxlength="255" id="msginput">
+                    <button type="submit" onclick="event.preventDefault(); sendMessage();" id="sendbutton">
+                        <img src="{{ url_for('static', filename='Assets/Send_button.svg') }}" alt="send" width="35px" height="35px">
+                    </button>
+                </form>
+            </div>
+        </div>
+        <form action="">
+            <button class="btn edit" onclick="location.href='http:\/\/localhost:5000/';">
+                BROWSE OTHER JOBS
+            </button>
+            <button class="btn select" onclick="event.preventDefault(); sendData();">
+                END INTERVIEW
+            </button>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="fluid-container mid-section footsection" id="footer">
+        <div class="row">
+            
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Mihir Singh</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/mihirs16"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/mihir-singh-456a5916a/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/cached_cadet"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:mihirs16@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>   
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Yashasvi Misra</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/yashasvimisra2798"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/yashasvi-misra-094511165/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/MisraYashasvi"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:misrayashasvi@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Siddhant Thakur</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/sidthakur08"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/siddhant-thakur-08/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/sidtweetsnow"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:siddhantthakur08@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Shushrut Sharma</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/shushrutsharma"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/shushrut-kumar-3a793814a"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/shushrut_sharma?s=09"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:shushrut.ss.sharma@gmail.com "><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="justify-content: center; background-color: #1971c2; height: 45px;">
+            <div style="padding: 7.5px">
+                <span style="font-family: SFProDisplay;font-size: 25px;font-weight: 300;font-style: bold;line-height: 1.21;color: white;">
+                    Made with ❤ by team Blueprint
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

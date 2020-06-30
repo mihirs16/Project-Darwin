@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="604.582" height="112.802" viewBox="0 0 604.582 112.802">
+  <g id="Logo" transform="translate(2.035)">
+    <g id="Group_28" data-name="Group 28" transform="translate(-291.467 204.102)">
+      <g id="Group_26" data-name="Group 26" transform="translate(291.467 -201.483)">
+        <path id="Path_11" data-name="Path 11" d="M333.082-302.8H215.524s-15.5,107.217,117.558,107.217" transform="translate(-214.971 302.8)" fill="#fff" stroke="#91a7ff" stroke-linecap="square" stroke-linejoin="round" stroke-width="4"/>
+        <path id="Path_12" data-name="Path 12" d="M349.2-307.6v107.217" transform="translate(-231.088 307.6)" fill="#dbe4ff" stroke="#91a7ff" stroke-linecap="square" stroke-width="4"/>
+        <path id="Path_13" data-name="Path 13" d="M215.65-302.75s33.794,62.078,115,47.5" transform="translate(-212.675 307.371)" fill="#dbe4ff" stroke="#91a7ff" stroke-linecap="square" stroke-width="4"/>
+      </g>
+      <path id="Path_14" data-name="Path 14" d="M409.655-201.483H291.96s18.905,32.511,49.964,45.946,67.731,6.641,67.731,6.641Z" transform="translate(-0.077 0.965)" fill="#bac8ff"/>
+      <g id="Group_27" data-name="Group 27" transform="translate(291.467 -200.517)">
+        <path id="Path_11-2" data-name="Path 11" d="M333.082-302.8H215.524s-15.5,107.217,117.558,107.217" transform="translate(-214.971 302.8)" fill="none" stroke="#1971c2" stroke-linecap="square" stroke-linejoin="round" stroke-width="4"/>
+        <path id="Path_12-2" data-name="Path 12" d="M349.2-307.6v107.217" transform="translate(-231.088 307.6)" fill="none" stroke="#1971c2" stroke-linecap="square" stroke-width="4"/>
+        <path id="Path_13-2" data-name="Path 13" d="M215.65-302.75s34.239,66.592,116.517,50.951" transform="translate(-214.187 303.756)" fill="none" stroke="#1971c2" stroke-linecap="square" stroke-width="4"/>
+      </g>
+    </g>
+    <path id="Path_292" data-name="Path 292" d="M9.871-107.1V0H47.648C79.563,0,98.34-19.891,98.34-53.734c0-33.77-18.852-53.363-50.691-53.363ZM26.5-92.773H46.09c22.637,0,35.254,13.953,35.254,39.188C81.344-28.277,68.8-14.4,46.09-14.4H26.5ZM135,1.336c10.242,0,20.113-5.492,24.641-14.176h.371V0h15.363V-53.809c0-15.66-12.1-25.68-31.023-25.68-19.3,0-31.32,10.391-32.211,24.492h15.141c1.41-6.977,7.2-11.43,16.477-11.43,9.8,0,15.66,5.2,15.66,13.879v6.012l-21.375,1.262c-18.555,1.039-29.02,9.426-29.02,23.082C109.027-8.164,119.715,1.336,135,1.336Zm4.453-12.691c-8.609,0-14.25-4.453-14.25-11.281,0-6.68,5.418-10.91,14.992-11.578L159.422-35.4v6.16C159.422-19.074,150.664-11.355,139.457-11.355ZM190.891,0h16.031V-46.758c0-11.059,6.383-17.961,16.7-17.961a22.947,22.947,0,0,1,7.2.891V-78.746a29.25,29.25,0,0,0-5.492-.594c-9.2,0-16.18,5.418-18.777,14.547h-.371V-78.078H190.891ZM343.781-78.078H327.9l-14.25,61.453h-.371L296.949-78.078H281.512L265.258-16.625h-.3l-14.25-61.453H234.68L256.129,0H272.68l16.254-58.484h.371L305.707,0h16.7ZM362.113-90.7a9.2,9.2,0,0,0,9.2-9.2,9.154,9.154,0,0,0-9.2-9.2,9.218,9.218,0,0,0-9.277,9.2A9.265,9.265,0,0,0,362.113-90.7ZM354.1,0h16.031V-78.078H354.1Zm32.434,0h16.031V-45.5c0-12.1,7.273-20.113,18.555-20.113,11.133,0,16.625,6.457,16.625,18.184V0h16.105V-50.543c0-17.887-9.871-28.871-27.09-28.871-12.023,0-20.336,5.492-24.566,14.4h-.371V-78.078H386.531Z" transform="translate(148.7 109.102)" fill="#1971c2"/>
+  </g>
+</svg>

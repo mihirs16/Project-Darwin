@@ -1,0 +1,181 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <!-- Title -->
+    <title>Darwin - Home</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='Assets/Logo-wo Name.svg') }}" type="image/gif" sizes="16x16">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css') }}">
+    <!-- Custom Js -->
+    <script src="{{ url_for('static', filename='allJobs_home.js') }}"></script>    
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="{{ url_for('static', filename='Assets/Logo-w Name.svg') }}" height="50px" width="250px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#darwin-mid-head"><span style="color: #1971c2; font-size: x-large;">Why Us?</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#what-want-head"><span style="color: #1971c2; font-size: x-large;">What we want</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#career-head"><span style="color: #1971c2; font-size: x-large;">Careers</span></a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead -->
+    <div class="fluid-container" id="masthead">
+        <div class="row">
+            <div class="col">
+                <div style="padding-left: 20%; padding-top: 25%;">
+                    <img class="img-fluid" src="{{ url_for('static', filename='Assets/Home_page_1.svg') }}">
+                </div>
+            </div>
+            <div class="col">
+                <div style="padding-top: 30%; width: 600px;">
+                    <h1 id="darwin-way-head">The Darwin Way</h1>
+                    <span id="darwin-way">
+                        Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed, volutpat suscipit arcu. Duis ut urna commodo, commodo tellus ac, consequat justo.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Midsection -->
+    <div class="fluid-container mid-section">
+        <div class="row">
+            <div class="col" id="midsection-female">
+                <img height="500px" width="200px" src="{{ url_for('static', filename='Assets/Home_page_2.svg') }}">
+            </div>
+            <div class="col">
+                <div style="padding-top: 15%; width: 400px; font-size: large; text-align: center;">
+                    <h1 id="darwin-mid-head">Why us?</h1>
+                    <span id="why-us">
+                        Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed, volutpat suscipit arcu. Duis ut urna commodo, commodo tellus ac, consequat justo.                    
+                    </span>
+                </div>
+            </div>
+            <div class="col-4" id="midsection-male" style="padding-left: 10%;">
+                <img height="500px" src="{{ url_for('static', filename='Assets/Home_page_3.svg') }}">
+            </div>
+        </div>
+    </div>
+    <!-- Careersection -->
+    <div class="fluid-container mid-section lowsection">
+        <div class="row">
+            <div class="col">
+                <div style="text-align: right; padding-left: 25%; padding-top: 25%; width: 750px;">
+                    <h1 id="what-want-head">What we want</h1>
+                    <span id="what-want">
+                        Phasellus dignissim, tellus in pellentesque mollis, mauris orci dignissim nisl, id gravida nunc enim quis nibh. Maecenas convallis eros a ante dignissim, vitae elementum metus facilisis. Cras in maximus sem. Praesent libero augue, ornare eget quam sed, volutpat suscipit arcu. Duis ut urna commodo, commodo tellus ac, consequat justo.
+                    </span>
+                </div>
+            </div>
+            <div class="col">
+                <div style="padding-left: 20%; padding-top: 25%;">
+                    <img class="img-fluid" height="350px" width="410" src="{{ url_for('static', filename='Assets/Home_page_4.svg') }}">
+                </div>
+            </div>
+        </div>
+        <!-- Career Opportunities -->
+        <div style="display: flex; justify-content: center;">
+            <div id="career-section">
+                <h1 id="career-head">Career Opportunities</h1>
+                <div style="display: none;"> 
+                    <div class="col m-3 p-3 jobcard">
+                        <div class="defaultdet">
+                            <div class="row ml-1 jobtitle">BACKEND DEVELOPER</div>
+                            <div class="row ml-1 joblocation">Oslo | Paris</div>
+                        </div>
+                        <div class="altdet">
+                            <div class="row ml-1 joblocation">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great it would be fun.</div>
+                            <div class="row ml-1 mt-3 joblocation" style="font-size: 20px;">HTML | CSS | JavaScript</div>
+                            <div class="row ml-1 mt-1 joblocation" style="font-size: 17.5px;">Experience: 2 Years</div>
+                        </div>    
+                        <div class="applybutton">APPLY <img src="{{ url_for('static', filename='Assets/arrow.svg') }}" width="25px" height="25px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Section -->
+    <div class="fluid-container mid-section footsection" id="footer">
+        <div class="row">
+            
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Mihir Singh</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/mihirs16"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/mihir-singh-456a5916a/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/cached_cadet"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:mihirs16@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>   
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Yashasvi Misra</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/yashasvimisra2798"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/yashasvi-misra-094511165/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/MisraYashasvi"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:misrayashasvi@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Siddhant Thakur</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/sidthakur08"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/siddhant-thakur-08/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/sidtweetsnow"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:siddhantthakur08@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Shushrut Sharma</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/shushrutsharma"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/shushrut-kumar-3a793814a"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/shushrut_sharma?s=09"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:shushrut.ss.sharma@gmail.com "><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="justify-content: center; background-color: #1971c2; height: 45px;">
+            <div style="padding: 7.5px">
+                <span style="font-family: SFProDisplay;font-size: 25px;font-weight: 300;font-style: bold;line-height: 1.21;color: white;">
+                    Made with ❤ by team Blueprint
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

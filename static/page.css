@@ -1,0 +1,37 @@
+@font-face {
+    font-family: SFProDisplay;
+    src: url("Assets\\fonts\\SFProDisplay-Regular.ttf") format('truetype');
+    
+}
+
+* {
+    overflow-x: hidden;
+    font-family: SFProDisplay;
+}  
+
+body {
+    background-attachment: fixed; 
+    background-position: center;
+    background-image: url(Assets/Grid_BG.svg); 
+    width: 100%; 
+    height: 100%;
+}
+
+#mainNav {
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.16);
+}
+
+#brandTitle {
+    margin-top: 10px;
+    font-size: 45px;
+}
+
+div.footsection img {
+    opacity: 0.5;
+}
+
+div.footsection img:hover {
+    opacity: 1.0;
+}

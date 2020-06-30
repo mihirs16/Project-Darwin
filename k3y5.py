@@ -1,0 +1,48 @@
+# imports
+import os
+from os.path import join, dirname
+from dotenv import load_dotenv
+
+# loading hidden secret keys using environment variables
+try:
+    dotenv_path = join(dirname(__file__), '.env')
+    load_dotenv(dotenv_path)
+    ADMIN_KEY = str(os.environ.get("ADMIN_KEY"))
+    ADMIN_USERNAME = str(os.environ.get("ADMIN_USERNAME"))
+    ADMIN_PASSWORD = str(os.environ.get("ADMIN_PASSWORD"))
+    TWITTER_API_KEY = str(os.environ.get('TWITTER_API_KEY'))
+    TWITTER_API_SECRET_KEY = str(os.environ.get('TWITTER_API_SECRET_KEY'))
+    TWITTER_ACCESS_TOKEN = str(os.environ.get('TWITTER_ACCESS_TOKEN'))
+    TWITTER_ACCESS_TOKEN_SECRET = str(os.environ.get('TWITTER_ACCESS_TOKEN_SECRET'))
+    IBM_API_KEY = str(os.environ.get('IBM_API_KEY'))
+    IBM_URL = str(os.environ.get('IBM_URL'))
+    DEV_GIT_KEY = str(os.environ.get('DEV_GIT_KEY'))
+    DB2_DB = str(os.environ.get('DB2_DB'))
+    DB2_HOSTNAME = str(os.environ.get('DB2_HOSTNAME'))
+    DB2_UID = str(os.environ.get('DB2_UID'))
+    DB2_PWD = str(os.environ.get('DB2_PWD'))
+    COS_API_KEY_ID = str(os.environ.get('COS_API_KEY_ID'))
+    COS_ENDPOINT = str(os.environ.get('COS_ENDPOINT'))
+    COS_AUTH_ENDPOINT = str(os.environ.get('COS_AUTH_ENDPOINT'))
+    COS_RESOURCE_CRN = str(os.environ.get('COS_RESOURCE_CRN'))
+    COS_SERVICE_CRN = str(os.environ.get('COS_SERVICE_CRN'))
+except:
+    ADMIN_KEY = str(os.environ.get("ADMIN_KEY"))
+    ADMIN_USERNAME = str(os.environ.get("ADMIN_USERNAME"))
+    ADMIN_PASSWORD = str(os.environ.get("ADMIN_PASSWORD"))
+    TWITTER_API_KEY = str(os.environ.get('TWITTER_API_KEY'))
+    TWITTER_API_SECRET_KEY = str(os.environ.get('TWITTER_API_SECRET_KEY'))
+    TWITTER_ACCESS_TOKEN = str(os.environ.get('TWITTER_ACCESS_TOKEN'))
+    TWITTER_ACCESS_TOKEN_SECRET = str(os.environ.get('TWITTER_ACCESS_TOKEN_SECRET'))
+    IBM_API_KEY = str(os.environ.get('IBM_API_KEY'))
+    IBM_URL = str(os.environ.get('IBM_URL'))
+    DEV_GIT_KEY = str(os.environ.get('DEV_GIT_KEY'))
+    DB2_DB = str(os.environ.get('DB2_DB'))
+    DB2_HOSTNAME = str(os.environ.get('DB2_HOSTNAME'))
+    DB2_UID = str(os.environ.get('DB2_UID'))
+    DB2_PWD = str(os.environ.get('DB2_PWD'))
+    COS_API_KEY_ID = str(os.environ.get('COS_API_KEY_ID'))
+    COS_ENDPOINT = str(os.environ.get('COS_ENDPOINT'))
+    COS_AUTH_ENDPOINT = str(os.environ.get('COS_AUTH_ENDPOINT'))
+    COS_RESOURCE_CRN = str(os.environ.get('COS_RESOURCE_CRN'))
+    COS_SERVICE_CRN = str(os.environ.get('COS_SERVICE_CRN'))

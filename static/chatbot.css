@@ -1,0 +1,136 @@
+#window {
+    /* margin-top: 1%; */
+    width: 1200px;
+    min-height: 500px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(54, 54, 54, 0.16);
+    background-image: linear-gradient(to top, #e7f5ff, #ffffff);
+}
+
+#chatwindow {
+    width: 95%;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    min-height: 500px;
+}
+
+.dp {
+    padding: 10px;
+}
+
+.dialogue {
+    padding: 20px;
+    max-width: 550px;
+    font-family: SFProDisplay;
+    font-size: 25px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+
+.bot {
+    background-color: #1971c2;
+}
+
+.user {
+    background-color: #a5d8ff;
+    color: #353535;
+}
+
+#message {
+    background-color: white;
+    border: solid 1px #707070;
+    padding: 10px;
+    width: 90%;
+}
+
+#sendbutton {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sendbutton:focus {
+    outline: none;
+}
+
+input[type='text'] {
+    border: none;
+    /* margin-top: 3px; */
+    padding-top: 3px;
+    width: calc(100% - 40px);
+    font-family: SFProDisplay;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+input[type='text']:focus {
+    outline: none;
+}
+
+.btn {
+    margin: 20px;
+    border: none;
+    width: 450px;
+    height: 100px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    font-weight: bold;font-family: SFProDisplay;font-size: 25px;
+}
+
+.btn.edit {
+    margin-left: 40px;
+    border: solid 2px #353535;
+    background-color: #ffffff;
+    color:#353535;
+}
+
+.btn.select {
+    float: right;
+    margin-right: 40px;
+    border: none;
+    background-color: #51cf66;
+    color:white;
+}
+
+.btn:hover {
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transition: all 0.1s;
+    transform: translateY(3px);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    outline: none;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.footsection {
+    /* margin-top: 10%; */
+    background-color: #f8f9fa;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#credit {
+    font-family: SFProDisplay;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: bold;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1864ab;
+    opacity: 0.5;
+}

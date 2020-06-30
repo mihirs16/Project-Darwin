@@ -1,0 +1,88 @@
+#login_panel {
+    padding-top: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+    position: fixed;
+    top: 150;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 450px;
+    width: 700px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to bottom, #ffffff, #e7f5ff);
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.input_div {
+    width: 100%;
+    border-bottom: 1px solid grey;
+    margin-bottom: 50px;
+    font-weight: bold;font-family: SFProDisplay;font-size: 20px;
+}
+  
+.input_div:hover {
+    border-bottom: 1px solid black;
+}
+
+.input_div:focus-within {
+    border-bottom: 1px solid #1971c2;
+}
+
+.login-btn {
+    border: none;
+    width: 250px;
+    height: 70px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #51cf66;
+    color:#ffffff;font-weight: bold;font-family: SFProDisplay;font-size: 26px;
+}
+
+.login-btn:hover {
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:active {
+    transition: all 0.1s;
+    transform: translateY(3px);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    outline: none;
+}
+
+.login-btn:focus {
+    outline: none;
+}
+
+.submit_div {
+    padding-left: 27%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.footsection {
+    position: absolute;
+    background-color: #f8f9fa;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#credit {
+    font-family: SFProDisplay;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: bold;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1864ab;
+    opacity: 0.5;
+}
