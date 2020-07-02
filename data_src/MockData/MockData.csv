@@ -1,0 +1,101 @@
+,overall_score,Date_Of_Joining,Skill,Year_of_Experience
+0,94,2020-07-02 19:07:25.297316,"['AI', 'Data Science', 'Web Developer']",23
+1,77,2020-07-12 19:07:25.297316,"['AI', 'Digital Marketing', 'Frontend Developer']",28
+2,88,2020-07-10 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'UI/UX']",27
+3,87,2020-07-13 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'UI/UX']",36
+4,96,2020-07-15 19:07:25.297316,"['AI', 'Backend Developer', 'UI/UX']",27
+5,99,2020-07-17 19:07:25.297316,"['Machine Learning', 'Data Science', 'Web Developer']",29
+6,87,2020-07-24 19:07:25.297316,"['Business Intelligence', 'Data Science', 'Frontend Developer']",32
+7,80,2020-07-14 19:07:25.297316,"['AI', 'Backend Developer', 'Frontend Developer']",25
+8,98,2020-07-17 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'UI/UX']",25
+9,86,2020-07-19 19:07:25.297316,"['Machine Learning', 'Data Science', 'Frontend Developer']",28
+10,75,2020-07-27 19:07:25.297316,"['Machine Learning', 'Data Science', 'UI/UX']",32
+11,87,2020-07-23 19:07:25.297316,"['AI', 'Data Science', 'Web Developer']",37
+12,93,2020-07-25 19:07:25.297316,"['AI', 'Data Science', 'Web Developer']",29
+13,77,2020-07-11 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'Web Developer']",38
+14,82,2020-07-07 19:07:25.297316,"['AI', 'Data Science', 'Frontend Developer']",22
+15,95,2020-07-04 19:07:25.297316,"['AI', 'Backend Developer', 'UI/UX']",34
+16,92,2020-07-17 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'Frontend Developer']",26
+17,99,2020-07-15 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'Web Developer']",28
+18,87,2020-06-30 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'Web Developer']",34
+19,91,2020-07-04 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Frontend Developer']",34
+20,99,2020-07-07 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'UI/UX']",36
+21,96,2020-07-12 19:07:25.297316,"['Machine Learning', 'Data Science', 'UI/UX']",35
+22,99,2020-07-08 19:07:25.297316,"['Machine Learning', 'Data Science', 'UI/UX']",26
+23,87,2020-07-02 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Web Developer']",29
+24,96,2020-07-18 19:07:25.297316,"['Machine Learning', 'Data Science', 'Frontend Developer']",28
+25,92,2020-07-08 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Web Developer']",25
+26,80,2020-07-05 19:07:25.297316,"['Business Intelligence', 'Data Science', 'UI/UX']",37
+27,75,2020-07-05 19:07:25.297316,"['AI', 'Backend Developer', 'Web Developer']",31
+28,88,2020-07-06 19:07:25.297316,"['Business Intelligence', 'Data Science', 'Web Developer']",28
+29,78,2020-07-03 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Web Developer']",22
+30,86,2020-07-05 19:07:25.297316,"['Machine Learning', 'Data Science', 'UI/UX']",39
+31,92,2020-07-18 19:07:25.297316,"['Machine Learning', 'Data Science', 'Frontend Developer']",37
+32,95,2020-07-04 19:07:25.297316,"['AI', 'Digital Marketing', 'UI/UX']",24
+33,94,2020-07-09 19:07:25.297316,"['AI', 'Backend Developer', 'Frontend Developer']",24
+34,92,2020-07-25 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'UI/UX']",23
+35,85,2020-07-09 19:07:25.297316,"['Machine Learning', 'Data Science', 'Frontend Developer']",31
+36,79,2020-07-26 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'Frontend Developer']",22
+37,85,2020-07-23 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'Frontend Developer']",27
+38,82,2020-07-21 19:07:25.297316,"['AI', 'Data Science', 'Web Developer']",35
+39,94,2020-07-24 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Frontend Developer']",27
+40,96,2020-07-05 19:07:25.297316,"['AI', 'Digital Marketing', 'Frontend Developer']",25
+41,94,2020-07-19 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'UI/UX']",31
+42,77,2020-07-14 19:07:25.297316,"['AI', 'Data Science', 'Frontend Developer']",31
+43,75,2020-07-27 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'UI/UX']",35
+44,90,2020-07-18 19:07:25.297316,"['Machine Learning', 'Digital Marketing', 'UI/UX']",37
+45,83,2020-07-05 19:07:25.297316,"['AI', 'Data Science', 'Frontend Developer']",34
+46,86,2020-07-10 19:07:25.297316,"['AI', 'Backend Developer', 'Web Developer']",25
+47,89,2020-07-26 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'Web Developer']",36
+48,94,2020-07-09 19:07:25.297316,"['Business Intelligence', 'Data Science', 'Web Developer']",23
+49,93,2020-07-10 19:07:25.297316,"['Machine Learning', 'Digital Marketing', 'UI/UX']",31
+50,79,2020-07-19 19:07:25.297316,"['AI', 'Backend Developer', 'Frontend Developer']",31
+51,77,2020-07-16 19:07:25.297316,"['AI', 'Data Science', 'Web Developer']",30
+52,83,2020-07-26 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'Frontend Developer']",23
+53,93,2020-07-06 19:07:25.297316,"['AI', 'Backend Developer', 'Web Developer']",31
+54,80,2020-07-17 19:07:25.297316,"['AI', 'Backend Developer', 'Frontend Developer']",24
+55,93,2020-07-20 19:07:25.297316,"['Machine Learning', 'Data Science', 'Web Developer']",30
+56,89,2020-06-30 19:07:25.297316,"['Business Intelligence', 'Data Science', 'Frontend Developer']",29
+57,81,2020-07-04 19:07:25.297316,"['Business Intelligence', 'Data Science', 'UI/UX']",30
+58,81,2020-07-10 19:07:25.297316,"['Machine Learning', 'Digital Marketing', 'Web Developer']",38
+59,75,2020-07-01 19:07:25.297316,"['Machine Learning', 'Data Science', 'Web Developer']",30
+60,87,2020-07-23 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Web Developer']",27
+61,85,2020-07-13 19:07:25.297316,"['Machine Learning', 'Digital Marketing', 'UI/UX']",35
+62,81,2020-07-13 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Frontend Developer']",29
+63,91,2020-07-01 19:07:25.297316,"['AI', 'Backend Developer', 'Web Developer']",33
+64,75,2020-07-20 19:07:25.297316,"['Machine Learning', 'Digital Marketing', 'Web Developer']",37
+65,76,2020-06-29 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'Web Developer']",39
+66,86,2020-07-06 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Frontend Developer']",35
+67,99,2020-07-18 19:07:25.297316,"['AI', 'Data Science', 'UI/UX']",33
+68,82,2020-07-08 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'Frontend Developer']",29
+69,95,2020-07-22 19:07:25.297316,"['AI', 'Data Science', 'UI/UX']",38
+70,84,2020-07-12 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'Web Developer']",39
+71,97,2020-06-29 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'Web Developer']",32
+72,77,2020-07-06 19:07:25.297316,"['Machine Learning', 'Data Science', 'Web Developer']",23
+73,76,2020-07-14 19:07:25.297316,"['AI', 'Digital Marketing', 'Web Developer']",28
+74,98,2020-07-03 19:07:25.297316,"['AI', 'Data Science', 'Web Developer']",35
+75,78,2020-07-15 19:07:25.297316,"['AI', 'Data Science', 'Web Developer']",23
+76,99,2020-07-27 19:07:25.297316,"['Machine Learning', 'Digital Marketing', 'Frontend Developer']",29
+77,79,2020-07-20 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'UI/UX']",23
+78,97,2020-07-09 19:07:25.297316,"['Machine Learning', 'Backend Developer', 'UI/UX']",38
+79,95,2020-07-15 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'Web Developer']",24
+80,83,2020-07-03 19:07:25.297316,"['Machine Learning', 'Data Science', 'Frontend Developer']",28
+81,82,2020-07-21 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'UI/UX']",25
+82,95,2020-07-12 19:07:25.297316,"['Business Intelligence', 'Digital Marketing', 'Frontend Developer']",28
+83,99,2020-06-30 19:07:25.297316,"['Business Intelligence', 'Backend Developer', 'Frontend Developer']",24
+84,76,2020-07-06 19:07:25.298363,"['Business Intelligence', 'Data Science', 'Frontend Developer']",25
+85,88,2020-07-02 19:07:25.298363,"['AI', 'Backend Developer', 'Frontend Developer']",22
+86,92,2020-07-15 19:07:25.298363,"['Business Intelligence', 'Backend Developer', 'Web Developer']",33
+87,98,2020-07-24 19:07:25.298363,"['AI', 'Digital Marketing', 'UI/UX']",39
+88,88,2020-07-24 19:07:25.298363,"['Machine Learning', 'Backend Developer', 'Web Developer']",32
+89,88,2020-07-13 19:07:25.298363,"['Business Intelligence', 'Data Science', 'UI/UX']",26
+90,80,2020-07-03 19:07:25.298363,"['Machine Learning', 'Backend Developer', 'UI/UX']",24
+91,79,2020-07-03 19:07:25.298363,"['AI', 'Digital Marketing', 'UI/UX']",27
+92,92,2020-07-10 19:07:25.298363,"['Business Intelligence', 'Digital Marketing', 'Web Developer']",28
+93,86,2020-07-10 19:07:25.298363,"['Business Intelligence', 'Data Science', 'Frontend Developer']",34
+94,79,2020-07-15 19:07:25.298363,"['Business Intelligence', 'Backend Developer', 'Frontend Developer']",34
+95,75,2020-07-05 19:07:25.298363,"['AI', 'Data Science', 'Web Developer']",34
+96,82,2020-07-19 19:07:25.298363,"['Business Intelligence', 'Data Science', 'UI/UX']",35
+97,89,2020-07-26 19:07:25.298363,"['AI', 'Backend Developer', 'Frontend Developer']",38
+98,86,2020-07-14 19:07:25.298363,"['AI', 'Digital Marketing', 'UI/UX']",23
+99,88,2020-07-07 19:07:25.298363,"['Machine Learning', 'Backend Developer', 'Web Developer']",25
