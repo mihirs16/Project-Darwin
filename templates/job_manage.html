@@ -1,0 +1,249 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    
+    <!-- Title -->
+    <title>Admin - Login</title>
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='Assets/Logo-wo Name.svg') }}" type="image/gif" sizes="16x16">    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='page.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='job_manage.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <img src="{{ url_for('static', filename='Assets/Logo-w Name.svg') }}" height="50px" width="250px">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="homepage.html"><span style="color: #1971c2; font-size: x-large;">Not an admin?</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Form -->
+    <div class="container" id="window">
+        <form action="" id="jobform">
+
+            <h1>Job Details</h1>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Job Role</h3>
+                <input type="text" name="jobrole" id="jobrole" placeholder="e.g. Frontend Developer" required>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Job Location</h3>
+                <input type="text" name="jobloc" id="jobloc" placeholder="e.g. New Delhi, India" required>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Job Location</h3>
+                <textarea name="jobdesc" id="jobdesc" placeholder="Describe the job here..." form="jobform" required></textarea>
+            </div>
+
+            <h1>Professional Requirements</h1>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Years of Experience</h3>
+                <input type="text" name="jobloc" id="jobloc" placeholder="e.g. New Delhi, India">
+                <h5>Multiplier Slider</h5>
+                <div class="custom-range">
+                    <input type="range" name="jobloc_mul" id="jobloc_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('jobloc_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[0].value = document.getElementById("jobloc_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Skills</h3>
+                <input type="text" name="skills" id="skills" placeholder="e.g. AI, Data Science, Marketing">
+                <h5>Multiplier Slider</h5>
+                <div class="custom-range">
+                    <input type="range" name="skills_mul" id="skills_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('skills_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[1].value = document.getElementById("skills_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>GitHub Score</h3>
+                <div class="custom-range">
+                    <input type="range" name="git_mul" id="git_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('git_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[2].value = document.getElementById("git_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <h1>
+                Personal & Social Requirements
+            </h1>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Big 5 Personality Traits</h3>
+                <div class="custom-range">
+                    <input type="range" name="big5_mul" id="big5_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('big5_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[3].value = document.getElementById("big5_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Values and Moral Traits</h3>
+                <div class="custom-range">
+                    <input type="range" name="val_mul" id="val_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('val_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[4].value = document.getElementById("val_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+
+            <h1>
+                Expected Responses
+            </h1>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Self Description</h3>
+                <input type="text" name="self_desc" id="self_desc" placeholder="e.g. Enthusiastic about technology, determined to work">
+                <h5>Multiplier Slider</h5>
+                <div class="custom-range">
+                    <input type="range" name="self_desc_mul" id="self_desc_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('self_desc_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[5].value = document.getElementById("self_desc_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Why do you want the job?</h3>
+                <input type="text" name="job_want_why" id="job_want_why" placeholder="e.g. Fair pay grade, high reputation">
+                <h5>Multiplier Slider</h5>
+                <div class="custom-range">
+                    <input type="range" name="job_want_why_mul" id="job_want_why_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('job_want_why_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[6].value = document.getElementById("job_want_why_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>What this job requires?</h3>
+                <input type="text" name="job_req_what" id="job_req_what" placeholder="e.g. expertise in systems architecture">
+                <h5>Multiplier Slider</h5>
+                <div class="custom-range">
+                    <input type="range" name="job_req_what_mul" id="job_req_what_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('job_req_what_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[7].value = document.getElementById("job_req_what_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Date of Joining?</h3>
+                <input type="text" name="doj" id="doj" placeholder="e.g. MM-DD-YY">
+                <h5>Multiplier Slider</h5>
+                <div class="custom-range">
+                    <input type="range" name="doj_mul" id="doj_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('doj_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[8].value = document.getElementById("doj_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="fluid-container mid-section footsection" id="footer">
+        <div class="row">
+            
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Mihir Singh</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/mihirs16"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/mihir-singh-456a5916a/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/cached_cadet"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:mihirs16@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>   
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Yashasvi Misra</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/yashasvimisra2798"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/yashasvi-misra-094511165/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/MisraYashasvi"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:misrayashasvi@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Siddhant Thakur</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/sidthakur08"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/siddhant-thakur-08/"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/sidtweetsnow"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:siddhantthakur08@gmail.com"><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+            <div class="col p-3">
+                <div class="row" style="justify-content: center;">
+                    <span id="credit">Shushrut Sharma</span>
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <a href="https://github.com/shushrutsharma"><img src="{{ url_for('static', filename='Assets/github.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://www.linkedin.com/in/shushrut-kumar-3a793814a"><img src="{{ url_for('static', filename='Assets/linkedin.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="https://twitter.com/shushrut_sharma?s=09"><img src="{{ url_for('static', filename='Assets/twitter.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                    <a href="mailto:shushrut.ss.sharma@gmail.com "><img src="{{ url_for('static', filename='Assets/email.svg') }}" width="30px" height="30px" style="margin: 10px;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="row " style="justify-content: center; background-color: #1971c2; height: 45px;">
+            <div style="padding: 7.5px">
+                <span style="font-family: SFProDisplay;font-size: 25px;font-weight: 300;font-style: bold;line-height: 1.21;color: white;">
+                    Made with ❤ by team Blueprint
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

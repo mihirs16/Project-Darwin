@@ -1,0 +1,171 @@
+#window {
+    padding-top: 125px;
+    padding-bottom: 125px;
+    padding-left: 255px;
+    padding-right: 255px;
+    width: 1200px;
+    min-height: 500px;
+    background-color: white;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to top, #e7f5ff, #ffffff);
+}
+
+h1 {
+    font-family: SFProDisplay;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 1.19;
+    color: #1971c2;
+}
+
+h3 {
+    font-family: SFProDisplay;
+    font-size: 25px;
+    font-weight: bold;
+    color: #1971c2;
+}
+
+
+h5 {
+    display: block;
+    margin-top: 20px;
+    margin-left: 1px;
+    font-size: 20px;
+    font-family: SFProDisplay;
+    color: #1971c2;
+}
+
+input[type="text"] {
+    width: 100%;
+    border-radius: 5px;
+    border: solid 2px #bce0fd;
+    background-color: #f1f9ff;
+    font-size: 20px;
+    padding: 3%;
+    font-family: SFProDisplay;
+    line-height: 1.2;
+    color: #1971c2;
+}
+
+input[type="text"]::placeholder {
+    color: #2699fb;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-radius: 5px;
+    border: solid 2px #1971c2;
+}
+
+textarea {
+    width: 100%;
+    height: 290px;
+    border-radius: 5px;
+    border: solid 2px #bce0fd;
+    background-color: #f1f9ff;
+    font-size: 20px;
+    padding: 3%;
+    font-family: SFProDisplay;
+    line-height: 1.2;
+    color: #1971c2;
+    resize: none;
+}
+
+textarea::placeholder {
+    color: #2699fb;
+}
+
+textarea:focus {
+    outline: none;
+    border-radius: 5px;
+    border: solid 2px #1971c2;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: none;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border: solid 1px #bce0fd;
+    background-color: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 25px;
+
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #bce0fd;
+    border-radius: 100px;
+    height: 15px;
+    height: 15px;
+    position: absolute;
+    top: 5px;
+    top: 5px;
+}
+
+progress[value]::-webkit-progress-value {
+    border-radius: 100px; 
+    height: 15px;
+    background-color: #51cf66;
+}
+
+.custom-range {
+    position: relative;
+    height: 50px;
+}
+
+input[type="range"] {
+    z-index: 10;
+    position: absolute;
+    top: 6px;
+}
+
+progress {
+    width: 100%;
+    position: absolute;
+    top: 6px;
+}
+
+.footsection {
+    margin-top: -5%;
+    background-color: #f8f9fa;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}
+
+#credit {
+    font-family: SFProDisplay;
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: bold;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    color: #1864ab;
+    opacity: 0.5;
+}

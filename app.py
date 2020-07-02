@@ -58,9 +58,6 @@ def getAllJobs():
 
 @app.route('/data/getResume/<id>', methods=['GET'])
 def getResume(id):
-    # if flask.request.method == 'POST':
-    #     os.remove(os.path.join(os.path.join(os.path.join(app.root_path, app.config['FILE_UPLOADS']), id+str('.pdf'))))
-    #     return 'File Removed'
     database.resume_vault.download_item(id, os.path.join(os.path.join(app.root_path, app.config['FILE_UPLOADS']), id+str('.pdf')))
     del_thread = threading.Thread(target=delay_delete, args=(5, os.path.join(os.path.join(os.path.join(app.root_path, app.config['FILE_UPLOADS']), id+str('.pdf')))))
     del_thread.start()
@@ -124,6 +121,10 @@ def billboard():
 @flask_login.login_required
 def applicants(jobid):
     return flask.render_template('job_applicants.html', jobid=jobid)
+
+@app.route('/admin/jobdetails')
+def jobdetails():
+    return flask.render_template('job_manage.html')
 
 @app.route('/data/admin/getCandidates/<jobid>')
 @flask_login.login_required
