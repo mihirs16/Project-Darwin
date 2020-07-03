@@ -149,6 +149,39 @@ progress {
     top: 6px;
 }
 
+.login-btn {
+    border: none;
+    width: 250px;
+    height: 70px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #51cf66;
+    color:#ffffff;font-weight: bold;font-family: SFProDisplay;font-size: 26px;
+}
+
+.login-btn:hover {
+    transition: all 0.1s;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:active {
+    transition: all 0.1s;
+    transform: translateY(3px);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    outline: none;
+}
+
+.login-btn:focus {
+    outline: none;
+}
+
+/* .submit_div {
+    padding-left: 27%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+} */
+
 .footsection {
     margin-top: -5%;
     background-color: #f8f9fa;
