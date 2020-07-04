@@ -54,12 +54,13 @@ def score_candidate(candy_data, ideal_data):
     passion_score = -doc_dist(candy_data['passion'], ideal_data['passion']) * ideal_data['passion_mul']
     job_skills_score = -doc_dist(candy_data['jobskills'], ideal_data['jobskills']) * ideal_data['jobskills_mul']
     yoe_score = abs(ideal_data['yoe'] - candy_data['yoe']) * ideal_data['yoe_mul']
+    apt_score = candy_data['apt'] * ideal_data['apt_mul']
     try:
         date_join_score = (datetime.datetime.strptime(str(ideal_data['date_join']), '%Yy-%m-%d') - datetime.datetime.strptime(candy_data['date_join'], '%m-%d-%y')).days * ideal_data['date_join_mul'] 
         print("date added")
     except:
         date_join_score = 0
         print("date not added")
-    overall_score = git_score + big5_score + values_score + self_desc_score + job_want_why_score + job_req_what_score + passion_score + yoe_score + date_join_score
+    overall_score = git_score + big5_score + values_score + self_desc_score + job_want_why_score + job_req_what_score + passion_score + yoe_score + date_join_score + apt_score
 
     return overall_score

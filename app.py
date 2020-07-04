@@ -122,9 +122,19 @@ def billboard():
 def applicants(jobid):
     return flask.render_template('job_applicants.html', jobid=jobid)
 
-@app.route('/admin/jobdetails')
-def jobdetails():
+@app.route('/admin/jobdetails/add', methods=['GET', 'POST'])
+def jobdetails_add():
+    if flask.request.method == 'POST':
+        print(flask.request.json)
+        return flask.redirect(flask.url_for('billboard'))
     return flask.render_template('job_manage.html')
+
+@app.route('/admin/jobdetails/edit/<jobid>', methods=['GET', 'POST'])
+def jobdetails_edit(jobid):
+    if flask.request.method == 'POST':
+        print(flask.request.json)
+        return flask.redirect(flask.url_for('billboard'))
+    return flask.render_template('job_manage.html', jobid=jobid)
 
 @app.route('/data/admin/getCandidates/<jobid>')
 @flask_login.login_required

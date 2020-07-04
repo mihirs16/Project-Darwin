@@ -1,0 +1,15 @@
+,QUE,OPT,ANS
+0,"What will be the next number: 3, 5, 7, 11, 13, 17...","21, 19, 25, 20",1
+1,"Find wrong number in series: 12, 25, 49, 99, 187, 395, 789","789, 187, 99, 49",1
+2,"Find wrong number in series: 34, 7, 37, 14, 36, 28, 43, 56","14, 36, 28, 56",1
+3,"Find wrong number in series: 8, 24, 12, 36, 18, 54, 26","12, 24, 18, 26",3
+4,"Find wrong number in series: 7, 26, 63, 124, 215, 342, 496","763, 215, 496",2
+5,"Find wrong number in series: 4, 5, 7, 12, 19, 35",1935-12-19 00:00:00,0
+6,"Find wrong number in series: 23, 29, 31, 33, 41, 43, 47","29, 33, 41, 47",1
+7,"Find wrong number in series: 0, 1, 2, 3, 5, 8, 13, …","0, 1, 2, 3",2
+8,"Find wrong number in series: 1, -8, 27, 64, 125, -216","-8, 27, 64, 125",2
+9,"Find wrong number in series: 8, 12, 16, 27, 40.5, 60.75","12, 16, 40.5, 60.75",1
+10,"Find wrong number in series:  15, 25, 30, 51, 85, 90, 115","30, 51, 85, 115",1
+11,"Find wrong number in series: 1, -6, 18, -54, 162, -486","1, -6, 162, -486",1
+12,"Find wrong number in series: 2, 8, 12, 20, 30, 42, 56, 72","8, 20, 42, 72",0
+13,"Find wrong number in series: 1, 8, 64, 125, 216","8, 27, 64, 216",2
