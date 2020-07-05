@@ -12,6 +12,8 @@ questions = [
     "Great! If everthing works out - from what date would you be available to join? (Format e.g. M-Dd-Yy)"
 ]
 responses = []
+var _test;
+var _score; 
 
 function greet() {
     botMessage("Hey! I'm Darwin, and I'm looking forward to know more about you!");
@@ -53,10 +55,10 @@ function sendMessage () {
 }
 
 function postConvo () {
+    takeApt();
     botMessage('Thank you so much for applying! Finally please upload your resume and click on END INTERVIEW to end the interview. It was nice to talk! See you soon!')
     chatWindow = document.getElementById('chatwindow');
     dialogueTemplate = document.getElementsByClassName("row mt-2 user_dialogue")[0];
-    // console.log(dialogueTemplate);
     uploadForm = document.createElement('form');
     uploadForm.action = "http://localhost:5000/data/newCandidate"
     uploadForm.method = "POST";
@@ -84,6 +86,7 @@ function postConvo () {
         "job_req_what": responses[8],
         "passion": responses[9],
         "job_want_why": responses[10],
+        "apt": _score,
         "date_join": responses[11],
     });
     jsonInput.style = "display: none;"
@@ -98,4 +101,57 @@ function postConvo () {
 
 function sendData () {
     document.getElementById("send-data").submit();
+}
+
+function takeApt () {
+    document.getElementById("overlay").style.display = "flex";
+    que = document.getElementById("questions");
+    
+    fetch("http://localhost:5000/data/getQuestions", { method: 'GET'})
+    .then(response => response.json())
+    .then(result => {
+        _test = result;
+        // console.log(result);
+        for (i = 0; i < result['que'].length; i++) {
+            newQ = document.createElement('li');
+            newQ.appendChild(document.createTextNode((i+1).toString() + ". " + result['que'][i]))
+            newQ.style = "margin-bottom: 20px; margin-top: 10px;"
+            for (j = 0; j < result['opt'][i].length; j++) {
+                thisOpt = document.createElement('input');
+                thisOpt.setAttribute("type", "radio");
+                thisOpt.id = i.toString() + "-" + j.toString();
+                thisOpt.name = i.toString();
+                thisOpt.style = "height: 35px;"
+                thisLabel = document.createElement('label');
+                thisLabel.style = "margin-bottom: 0px; margin-left: 20px;"
+                thisLabel.appendChild(document.createTextNode(result['opt'][i][j]));
+
+                newOpt = document.createElement('li');
+                newOpt.style = "list-style: none;"
+                newOpt.appendChild(thisOpt);
+                newOpt.appendChild(thisLabel);
+                newQ.appendChild(newOpt);
+            }
+            que.appendChild(newQ);
+        }
+        // calcTest (result)
+    })
+    .catch(error => console.log('error', error));
+}
+
+function calcTest () {
+    result = _test;
+    score = 0;
+    overlay = document.getElementById("overlay");
+    overlay.style.display = "none";
+    answers = overlay.getElementsByTagName('input');
+    for (i = 0; i < answers.length; i++) {
+        if (answers[i].checked) {
+            if (result['ans'][answers[i].id.split('-')[0]] == answers[i].id.split('-')[1]) {
+                score = score + 1;
+            }
+        } 
+    }
+    console.log (score);
+    _score = score;
 }

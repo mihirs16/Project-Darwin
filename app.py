@@ -6,6 +6,8 @@ import time
 
 import flask
 import flask_login
+import pandas as pd
+from ast import literal_eval
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
 from k3y5 import ADMIN_USERNAME, ADMIN_PASSWORD, ADMIN_KEY
@@ -95,6 +97,26 @@ def newCandidate():
     print (":new candidate added")
     os.remove(path)
     return flask.redirect(flask.url_for('homepage'))
+
+@app.route('/data/getQuestions', methods=['GET'])
+def getQues():
+    _qt = pd.read_csv('data_src/g4g/quants.csv', converters={"OPT": literal_eval}, dtype=str)
+    _lg = pd.read_csv('data_src/g4g/logix.csv', converters={"OPT": literal_eval}, dtype=str)
+    _vr = pd.read_csv('data_src/g4g/verbs.csv', converters={"OPT": literal_eval}, dtype=str)
+
+    qt = _qt.sample(n=5)
+    lg = _lg.sample(n=5)
+    vr = _vr.sample(n=5)
+
+    response = {
+        "que": list(qt['QUE'].values) + list(lg['QUE'].values) + list(vr['QUE'].values),
+        "opt": list(qt['OPT'].values) + list(lg['OPT'].values) + list(vr['OPT'].values),
+        "ans": list(qt['ANS'].values) + list(lg['ANS'].values) + list(vr['ANS'].values)
+    }
+    print (response)
+    return flask.jsonify(response)
+     
+
 # -----------------------------------------------------
 
 # ---- admin services ---------------------------------

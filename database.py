@@ -274,31 +274,31 @@ def getAllCandidates(id):
     return allCandy
 
 # ---- mock functions -----------------------------------------------------------
-add_job({
-    'jobrole': "BACKEND DEVELOPER",
-    'location': "Delhi, India",
-    'description': "The job will have the require the recruit to work his/her way through complex infrastructure problems and build scalable and robust web applications.",
-    'yoe': 2,
-    'jobskills': "AI, Data Science, NoSQL",
-    'gitId': "mihirs16",
-    'tweetId': "@cached_cadet",
-    'self_desc': "Highly interested in unlocking answers through Data and Stats for questions in fields like Electronics, Robotics Healthcare, Media and Sports. I am currently learning and working in the field of Natural Language Processing and Deep Learning.",
-    'job_want_why': "Well, I believe Blueprint can help me develop my skills and offer me a fair paygrade for all my work",
-    'job_req_what': "I think I will be assigned to a team that develops software and I will handle the frontend.",
-    'passion': "I am passionate about my technology and the web.",
-    'date_join': "6-19-20",
-    'yoe_mul': 0.5,
-    'jobskills_mul': 0.5,
-    'gitId_mul': 0.5,
-    'big5_mul': 0.5,
-    'values_mul': 0.5,
-    'self_desc_mul': 0.5,
-    'job_want_why_mul': 0.5,
-    'job_req_what_mul': 0.5,
-    'passion_mul': 0.5,
-    'apt_mul': 0.5,
-    'date_join_mul': 0.5
-})
+# add_job({
+#     'jobrole': "BACKEND DEVELOPER",
+#     'location': "Delhi, India",
+#     'description': "The job will have the require the recruit to work his/her way through complex infrastructure problems and build scalable and robust web applications.",
+#     'yoe': 2,
+#     'jobskills': "AI, Data Science, NoSQL",
+#     'gitId': "mihirs16",
+#     'tweetId': "@cached_cadet",
+#     'self_desc': "Highly interested in unlocking answers through Data and Stats for questions in fields like Electronics, Robotics Healthcare, Media and Sports. I am currently learning and working in the field of Natural Language Processing and Deep Learning.",
+#     'job_want_why': "Well, I believe Blueprint can help me develop my skills and offer me a fair paygrade for all my work",
+#     'job_req_what': "I think I will be assigned to a team that develops software and I will handle the frontend.",
+#     'passion': "I am passionate about my technology and the web.",
+#     'date_join': "6-19-20",
+#     'yoe_mul': 0.5,
+#     'jobskills_mul': 0.5,
+#     'gitId_mul': 0.5,
+#     'big5_mul': 0.5,
+#     'values_mul': 0.5,
+#     'self_desc_mul': 0.5,
+#     'job_want_why_mul': 0.5,
+#     'job_req_what_mul': 0.5,
+#     'passion_mul': 0.5,
+#     'apt_mul': 0.5,
+#     'date_join_mul': 0.5
+# })
 # add_candidate({
 #     "jobId": "2",
 #     "cname": "Mihir Singh",

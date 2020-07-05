@@ -51,6 +51,20 @@
     </nav>
 
     <!-- Chatbot -->
+    <div id="overlay">
+        <div id="apt">
+            <div class="container p-5 testwindow">
+                <h1 style="margin-left: 40px;">
+                    Aptitude Test
+                </h1>
+                <ol id="questions">
+                </ol>
+                <button class="btn apt" onclick="event.preventDefault(); calcTest();">
+                    SUBMIT TEST
+                </button>
+            </div>
+        </div>
+    </div>
     <div class="container" id="window">
         <div class="container" id="chatwindow">
             <div id="dialogueTemplate" style="display: none;">
