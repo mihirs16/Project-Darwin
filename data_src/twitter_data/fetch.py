@@ -100,8 +100,8 @@ def get_all_tweets_dic(username):
     try:
         new_tweets = api.user_timeline(screen_name=username,count=MAX_TWEET)
         all_tweets.extend(new_tweets)
-    except tweepy.error.TweepError:
-        print("Username doesn't exist or the API or ACCESS tokens is wrong")
+    except:
+        return (-1)
 
     '''while len(new_tweets)>0:
         print(f"getting tweets before {oldest}")
@@ -313,30 +313,51 @@ def get_dist(insight1,insight2):
 def twtScore(username):
     tw_dic1 = get_all_tweets_dic(username)
     # tw_dic2 = get_all_tweets_dic(username2)
-    insight1 = get_insight(tw_dic1)
-    # insight2 = get_insight(tw_dic2)
-    '''print(insight1)
-    print(insight2)'''
-    # diff = get_dist(insight1,insight2)
-    insight1 = json.loads(insight1)
-    score = {
-        'big5': {
-            'openness': insight1['personality'][0]['raw_score'],
-            'conscientiousness': insight1['personality'][1]['raw_score'],
-            'extraversion': insight1['personality'][2]['raw_score'],
-            'agreeableness': insight1['personality'][3]['raw_score'],
-            'neuroticism': insight1['personality'][4]['raw_score']
-        },
-        'values': {
-            'conservation':  insight1['values'][0]['raw_score'],
-            'open_to_change':  insight1['values'][1]['raw_score'],
-            'self_enhancement': insight1['values'][3]['raw_score'],
-            'self_transcendence':  insight1['values'][4]['raw_score']
+    if tw_dic1 == -1:
+        score = {
+            'big5': {
+                'openness': 0,
+                'conscientiousness': 0,
+                'extraversion': 0,
+                'agreeableness': 0,
+                'neuroticism': 0
+            },
+            'values': {
+                'conservation':  0,
+                'open_to_change': 0,
+                'self_enhancement': 0,
+                'self_transcendence': 0
+            }
         }
-    }
-    big5_score = (score['big5']['openness'] + score['big5']['conscientiousness'] + score['big5']['extraversion'] + score['big5']['agreeableness'] + score['big5']['neuroticism'])/5
-    value_score = (score['values']['conservation'] + score['values']['open_to_change'] + score['values']['self_enhancement'] + score['values']['self_transcendence'])/4 
-    return big5_score, value_score
+        big5_score = (score['big5']['openness'] + score['big5']['conscientiousness'] + score['big5']['extraversion'] + score['big5']['agreeableness'] + score['big5']['neuroticism'])/5
+        value_score = (score['values']['conservation'] + score['values']['open_to_change'] + score['values']['self_enhancement'] + score['values']['self_transcendence'])/4 
+        return big5_score,value_score
+    else:
+        insight1 = get_insight(tw_dic1)
+        # insight2 = get_insight(tw_dic2)
+        '''print(insight1)
+        print(insight2)'''
+        # diff = get_dist(insight1,insight2)
+        insight1 = json.loads(insight1)
+        score = {
+            'big5': {
+                'openness': insight1['personality'][0]['raw_score'],
+                'conscientiousness': insight1['personality'][1]['raw_score'],
+                'extraversion': insight1['personality'][2]['raw_score'],
+                'agreeableness': insight1['personality'][3]['raw_score'],
+                'neuroticism': insight1['personality'][4]['raw_score']
+            },
+            'values': {
+                'conservation': insight1['values'][0]['raw_score'],
+                'open_to_change': insight1['values'][1]['raw_score'],
+                'self_enhancement': insight1['values'][3]['raw_score'],
+                'self_transcendence': insight1['values'][4]['raw_score']
+            }
+        }
+        big5_score = (score['big5']['openness'] + score['big5']['conscientiousness'] + score['big5']['extraversion'] + score['big5']['agreeableness'] + score['big5']['neuroticism'])/5
+        value_score = (score['values']['conservation'] + score['values']['open_to_change'] + score['values']['self_enhancement'] + score['values']['self_transcendence'])/4 
+        return big5_score, value_score
+
 '''
 raw
 - openness
@@ -345,5 +366,7 @@ raw
 - conscientiousness
 - neuroticism
 '''
-# print(twtScore('@sidtweetsnow', '@cached_cadet'))
+
+print(twtScore('@cached_cadet'))
+print(twtScore('@wubbalubbadubdub')) # doesn't exist
 # print(get_insight(get_all_tweets_dic('@cached_cadet')))
