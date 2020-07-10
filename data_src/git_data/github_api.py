@@ -83,13 +83,16 @@ def getUserGitData(user):
 
 # Function used to calculate the difference between two users regarding their average and recent contribution  
 def gitDistance(user1, user2):
-    stat1 = getUserGitData(user1)
-    stat2 = getUserGitData(user2)
+    try:
+        stat1 = getUserGitData(user1)
+        stat2 = getUserGitData(user2)
 
-    score = {
-        "avgContri": abs(stat1['avgContri'] - stat2['avgContri']),
-        "recentContri": abs(stat1['recentContri'] - stat2['recentContri'])
-    }
-    return (score['avgContri']/10 + score['recentContri']/100)/2
+        score = {
+            "avgContri": abs(stat1['avgContri'] - stat2['avgContri']),
+            "recentContri": abs(stat1['recentContri'] - stat2['recentContri'])
+        }
+        return (score['avgContri']/10 + score['recentContri']/100)/2
+    except:
+        return 0
 
 
