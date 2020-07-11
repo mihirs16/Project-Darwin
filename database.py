@@ -34,37 +34,38 @@ def add_candidate(newCandy, resumeFilePath):
         print ("Couldn't Connect to Database")
         return False    
 
-    try:
-        cursor.execute("SELECT count(*) FROM JOB_" + str(newCandy['jobId']) + ";")
-        candyCount = int(cursor.fetchall()[0][0])
-        print("No. of current Applicants: ", candyCount)
+    # try:
+    cursor.execute("SELECT count(*) FROM JOB_" + str(newCandy['jobId']) + ";")
+    candyCount = int(cursor.fetchall()[0][0])
+    print("No. of current Applicants: ", candyCount)
 
-        q1 = "INSERT INTO JOB_" + str(newCandy['jobId']) + " (CANDY_ID, CNAME, EMAIL, GITID, TWEETID, YOE, SKILLS, SELF_DESC, JOB_WANT_WHY, JOB_REQ_WHAT, PASSION, DATE_JOIN, OVERALL_SCORE)"
-        q1 = q1 + " VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', {12}, '{13}');".format(
-            candyCount+1,
-            newCandy['cname'],
-            newCandy['email'],
-            newCandy['gitId'],
-            newCandy['tweetId'],
-            newCandy['yoe'],
-            newCandy['jobskills'],
-            newCandy['self_desc'],
-            newCandy['job_want_why'],
-            newCandy['job_req_what'],
-            newCandy['passion'],
-            newCandy['apt'],
-            datetime.datetime.strptime(newCandy['date_join'], '%m-%d-%y'),
-            candyScore
-        )
-        cursor.execute(q1)
-        cursor.execute("SELECT * FROM JOB_" + str(newCandy['jobId']) + ";")
-        for r in cursor.fetchall():
-            print(r)
-    except:
-        print ("Candy Query Error!")
-        ibm_db.close(ibm_db_conn)
-        print ("connection closed")
-        return False
+    q1 = "INSERT INTO JOB_" + str(newCandy['jobId']) + " (CANDY_ID, CNAME, EMAIL, GITID, TWEETID, YOE, SKILLS, SELF_DESC, JOB_WANT_WHY, JOB_REQ_WHAT, PASSION, APT, DATE_JOIN, OVERALL_SCORE)"
+    q1 = q1 + " VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', {5}, '{6}', '{7}', '{8}', '{9}', '{10}', {11}, '{12}', '{13}');".format(
+        candyCount+1,
+        newCandy['cname'],
+        newCandy['email'],
+        newCandy['gitId'],
+        newCandy['tweetId'],
+        newCandy['yoe'],
+        newCandy['jobskills'],
+        newCandy['self_desc'],
+        newCandy['job_want_why'],
+        newCandy['job_req_what'],
+        newCandy['passion'],
+        newCandy['apt'],
+        datetime.datetime.strptime(newCandy['date_join'], '%m-%d-%y'),
+        candyScore
+    )
+    print (q1)
+    cursor.execute(q1)
+    cursor.execute("SELECT * FROM JOB_" + str(newCandy['jobId']) + ";")
+    for r in cursor.fetchall():
+        print(r)
+    # except:
+    #     print ("Candy Query Error!")
+    #     ibm_db.close(ibm_db_conn)
+    #     print ("connection closed")
+    #     return False
 
     try:
         print ("uploading resume for " + str(newCandy['jobId']) + "_" + str(candyCount+1))
@@ -92,48 +93,48 @@ def add_job(jobData):
         print ("Couldn't Connect to Database")
         return False
 
-    try:
-        cursor.execute("SELECT count(*) FROM JOBS_RAW;")
-        jobCount = int(cursor.fetchall()[0][0])
-        print("No. of current Job Postings: ", jobCount)
+    # try:
+    cursor.execute("SELECT count(*) FROM JOBS_RAW;")
+    jobCount = int(cursor.fetchall()[0][0])
+    print("No. of current Job Postings: ", jobCount)
 
-        q1 = "INSERT INTO JOBS_RAW (JOBID, JOBROLE, JOBLOC, JOBDESC, JOBYOE, JOBYOE_MUL, JOBSKILLS, JOBSKILLS_MUL, GITID, GIT_MUL, TWEETID, BIG5_MUL, VALUES_MUL, SELF_DESC, SELF_DESC_MUL, JOB_WANT_WHY, JOB_WANT_WHY_MUL, JOB_REQ_WHAT, JOB_REQ_WHAT_MUL, PASSION, PASSION_MUL, APT_MUL, DATE_JOIN, DATE_JOIN_MUL)"
-        q1 = q1 + " VALUES ({0}, '{1}', '{2}', '{3}', {4}, {5}, '{6}', {7}, '{8}', {9}, '{10}', {11}, {12}, '{13}', {14}, '{15}', {16}, '{17}', {18}, '{19}', {20}, {21}, '{22}', {23});".format(
-            jobCount+1,
-            jobData['jobrole'],
-            jobData['location'],
-            jobData['description'],
-            jobData['yoe'],
-            jobData['yoe_mul'],            
-            jobData['jobskills'],
-            jobData['jobskills_mul'],
-            jobData['gitId'],
-            jobData['gitId_mul'],
-            jobData['tweetId'],
-            jobData['big5_mul'],
-            jobData['values_mul'],
-            jobData['self_desc'],
-            jobData['self_desc_mul'],
-            jobData['job_want_why'],
-            jobData['job_want_why_mul'],
-            jobData['job_req_what'],
-            jobData['job_req_what_mul'],
-            jobData['passion'],
-            jobData['passion_mul'],
-            jobData['apt_mul'],
-            datetime.datetime.strptime(jobData['date_join'], '%m-%d-%y'),
-            jobData['date_join_mul']
-        )
-        # print (q1)
-        cursor.execute(q1)
-        cursor.execute("SELECT * FROM JOBS_RAW;")
-        for r in cursor.fetchall():
-            print(r)
-    except:
-        print ("JOBS_RAW Query Error!")
-        ibm_db.close(ibm_db_conn)
-        print ("connection closed")
-        return False
+    q1 = "INSERT INTO JOBS_RAW (JOBID, JOBROLE, JOBLOC, JOBDESC, JOBYOE, JOBYOE_MUL, JOBSKILLS, JOBSKILLS_MUL, GITID, GIT_MUL, TWEETID, BIG5_MUL, VALUES_MUL, SELF_DESC, SELF_DESC_MUL, JOB_WANT_WHY, JOB_WANT_WHY_MUL, JOB_REQ_WHAT, JOB_REQ_WHAT_MUL, PASSION, PASSION_MUL, APT_MUL, DATE_JOIN, DATE_JOIN_MUL)"
+    q1 = q1 + " VALUES ({0}, '{1}', '{2}', '{3}', {4}, {5}, '{6}', {7}, '{8}', {9}, '{10}', {11}, {12}, '{13}', {14}, '{15}', {16}, '{17}', {18}, '{19}', {20}, {21}, '{22}', {23});".format(
+        jobCount+1,
+        jobData['jobrole'],
+        jobData['location'],
+        jobData['description'],
+        jobData['yoe'],
+        jobData['yoe_mul'],            
+        jobData['jobskills'],
+        jobData['jobskills_mul'],
+        "mihirs16",
+        jobData['gitId_mul'],
+        "@cached_cadet",
+        jobData['big5_mul'],
+        jobData['values_mul'],
+        jobData['self_desc'],
+        jobData['self_desc_mul'],
+        jobData['job_want_why'],
+        jobData['job_want_why_mul'],
+        jobData['job_req_what'],
+        jobData['job_req_what_mul'],
+        jobData['passion'],
+        jobData['passion_mul'],
+        jobData['apt_mul'],
+        datetime.datetime.strptime(jobData['date_join'], '%m-%d-%y'),
+        jobData['date_join_mul']
+    )
+    # print (q1)
+    cursor.execute(q1)
+    cursor.execute("SELECT * FROM JOBS_RAW;")
+    for r in cursor.fetchall():
+        print(r)
+    # except:
+    #     print ("JOBS_RAW Query Error!")
+    #     ibm_db.close(ibm_db_conn)
+    #     print ("connection closed")
+    #     return False
 
     try:
         q1 = "CREATE TABLE JOB_" + str(jobCount+1)
@@ -275,29 +276,29 @@ def getAllCandidates(id):
 
 # ---- mock functions -----------------------------------------------------------
 # add_job({
-#     'jobrole': "BACKEND DEVELOPER",
-#     'location': "Delhi, India",
-#     'description': "The job will have the require the recruit to work his/her way through complex infrastructure problems and build scalable and robust web applications.",
-#     'yoe': 2,
-#     'jobskills': "AI, Data Science, NoSQL",
-#     'gitId': "mihirs16",
-#     'tweetId': "@cached_cadet",
-#     'self_desc': "Highly interested in unlocking answers through Data and Stats for questions in fields like Electronics, Robotics Healthcare, Media and Sports. I am currently learning and working in the field of Natural Language Processing and Deep Learning.",
-#     'job_want_why': "Well, I believe Blueprint can help me develop my skills and offer me a fair paygrade for all my work",
-#     'job_req_what': "I think I will be assigned to a team that develops software and I will handle the frontend.",
-#     'passion': "I am passionate about my technology and the web.",
-#     'date_join': "6-19-20",
-#     'yoe_mul': 0.5,
-#     'jobskills_mul': 0.5,
-#     'gitId_mul': 0.5,
-#     'big5_mul': 0.5,
-#     'values_mul': 0.5,
-#     'self_desc_mul': 0.5,
-#     'job_want_why_mul': 0.5,
-#     'job_req_what_mul': 0.5,
-#     'passion_mul': 0.5,
-#     'apt_mul': 0.5,
-#     'date_join_mul': 0.5
+    # 'jobrole': "BACKEND DEVELOPER",
+    # 'location': "Delhi, India",
+    # 'description': "The job will have the require the recruit to work his/her way through complex infrastructure problems and build scalable and robust web applications.",
+    # 'yoe': 2,
+    # 'jobskills': "AI, Data Science, NoSQL",
+    # 'gitId': "mihirs16",
+    # 'tweetId': "@cached_cadet",
+    # 'self_desc': "Highly interested in unlocking answers through Data and Stats for questions in fields like Electronics, Robotics Healthcare, Media and Sports. I am currently learning and working in the field of Natural Language Processing and Deep Learning.",
+    # 'job_want_why': "Well, I believe Blueprint can help me develop my skills and offer me a fair paygrade for all my work",
+    # 'job_req_what': "I think I will be assigned to a team that develops software and I will handle the frontend.",
+    # 'passion': "I am passionate about my technology and the web.",
+    # 'date_join': "6-19-20",
+    # 'yoe_mul': 0.5,
+    # 'jobskills_mul': 0.5,
+    # 'gitId_mul': 0.5,
+    # 'big5_mul': 0.5,
+    # 'values_mul': 0.5,
+    # 'self_desc_mul': 0.5,
+    # 'job_want_why_mul': 0.5,
+    # 'job_req_what_mul': 0.5,
+    # 'passion_mul': 0.5,
+    # 'apt_mul': 0.5,
+    # 'date_join_mul': 0.5
 # })
 # add_candidate({
 #     "jobId": "2",

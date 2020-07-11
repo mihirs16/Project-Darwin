@@ -40,7 +40,7 @@
 
     <!-- Form -->
     <div class="container" id="window">
-        <form action="" id="jobform">
+        <form action="/admin/jobdetails/add" method="POST" id="jobform">
 
             <h1>
                 Job Details
@@ -54,7 +54,7 @@
                 <input type="text" name="jobloc" id="jobloc" placeholder="e.g. New Delhi, India" required>
             </div>
             <div class="row pl-3 pr-3 mt-5 mb-5">
-                <h3>Job Location</h3>
+                <h3>Job Description</h3>
                 <textarea name="jobdesc" id="jobdesc" placeholder="Describe the job here..." form="jobform" required></textarea>
             </div>
 
@@ -63,14 +63,14 @@
             </h1>
             <div class="row pl-3 pr-3 mt-5 mb-5">
                 <h3>Years of Experience</h3>
-                <input type="text" name="jobloc" id="jobloc" placeholder="e.g. New Delhi, India">
+                <input type="text" name="jobyoe" id="jobyoe" placeholder="e.g. 2">
                 <h5>Multiplier Slider</h5>
                 <div class="custom-range">
-                    <input type="range" name="jobloc_mul" id="jobloc_mul" min="0" max="100" value="50">
+                    <input type="range" name="jobyoe_mul" id="jobyoe_mul" min="0" max="100" value="50">
                     <progress value="50" max="100" class="prog"></progress>
                     <script>
-                        document.getElementById('jobloc_mul').addEventListener("input", () => {
-                            document.getElementsByClassName('prog')[0].value = document.getElementById("jobloc_mul").value;
+                        document.getElementById('jobyoe_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[0].value = document.getElementById("jobyoe_mul").value;
                         });
                     </script>
                 </div>
@@ -90,13 +90,25 @@
                 </div>
             </div>
             <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>Aptitude Test Score</h3>
+                <div class="custom-range">
+                    <input type="range" name="apt_mul" id="apt_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('apt_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[2].value = document.getElementById("apt_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
                 <h3>GitHub Score</h3>
                 <div class="custom-range">
                     <input type="range" name="git_mul" id="git_mul" min="0" max="100" value="50">
                     <progress value="50" max="100" class="prog"></progress>
                     <script>
                         document.getElementById('git_mul').addEventListener("input", () => {
-                            document.getElementsByClassName('prog')[2].value = document.getElementById("git_mul").value;
+                            document.getElementsByClassName('prog')[3].value = document.getElementById("git_mul").value;
                         });
                     </script>
                 </div>
@@ -112,7 +124,7 @@
                     <progress value="50" max="100" class="prog"></progress>
                     <script>
                         document.getElementById('big5_mul').addEventListener("input", () => {
-                            document.getElementsByClassName('prog')[3].value = document.getElementById("big5_mul").value;
+                            document.getElementsByClassName('prog')[4].value = document.getElementById("big5_mul").value;
                         });
                     </script>
                 </div>
@@ -124,7 +136,7 @@
                     <progress value="50" max="100" class="prog"></progress>
                     <script>
                         document.getElementById('val_mul').addEventListener("input", () => {
-                            document.getElementsByClassName('prog')[4].value = document.getElementById("val_mul").value;
+                            document.getElementsByClassName('prog')[5].value = document.getElementById("val_mul").value;
                         });
                     </script>
                 </div>
@@ -142,7 +154,7 @@
                     <progress value="50" max="100" class="prog"></progress>
                     <script>
                         document.getElementById('self_desc_mul').addEventListener("input", () => {
-                            document.getElementsByClassName('prog')[5].value = document.getElementById("self_desc_mul").value;
+                            document.getElementsByClassName('prog')[6].value = document.getElementById("self_desc_mul").value;
                         });
                     </script>
                 </div>
@@ -156,7 +168,7 @@
                     <progress value="50" max="100" class="prog"></progress>
                     <script>
                         document.getElementById('job_want_why_mul').addEventListener("input", () => {
-                            document.getElementsByClassName('prog')[6].value = document.getElementById("job_want_why_mul").value;
+                            document.getElementsByClassName('prog')[7].value = document.getElementById("job_want_why_mul").value;
                         });
                     </script>
                 </div>
@@ -170,7 +182,21 @@
                     <progress value="50" max="100" class="prog"></progress>
                     <script>
                         document.getElementById('job_req_what_mul').addEventListener("input", () => {
-                            document.getElementsByClassName('prog')[7].value = document.getElementById("job_req_what_mul").value;
+                            document.getElementsByClassName('prog')[8].value = document.getElementById("job_req_what_mul").value;
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="row pl-3 pr-3 mt-5 mb-5">
+                <h3>What are you passionate about?</h3>
+                <input type="text" name="passion" id="passion" placeholder="e.g. expertise in systems architecture">
+                <h5>Multiplier Slider</h5>
+                <div class="custom-range">
+                    <input type="range" name="passion_mul" id="passion_mul" min="0" max="100" value="50">
+                    <progress value="50" max="100" class="prog"></progress>
+                    <script>
+                        document.getElementById('passion_mul').addEventListener("input", () => {
+                            document.getElementsByClassName('prog')[9].value = document.getElementById("passion_mul").value;
                         });
                     </script>
                 </div>
@@ -184,14 +210,51 @@
                     <progress value="50" max="100" class="prog"></progress>
                     <script>
                         document.getElementById('doj_mul').addEventListener("input", () => {
-                            document.getElementsByClassName('prog')[8].value = document.getElementById("doj_mul").value;
+                            document.getElementsByClassName('prog')[10].value = document.getElementById("doj_mul").value;
                         });
                     </script>
                 </div>
             </div>
-
             <div class="row pt-5 pb-5 justify-content-center">
-                    <button type="submit" class="login-btn">PUBLISH</button>
+                <script>
+                    function sendData () {
+                        var jobData = {
+                            "jobrole": document.getElementById("jobrole").value,
+                            "location": document.getElementById("jobloc").value,
+                            "description": document.getElementById("jobdesc").value,
+                            "yoe": document.getElementById("jobyoe").value,
+                            "yoe_mul": document.getElementById("jobyoe_mul").value/100,
+                            "jobskills": document.getElementById("skills").value,
+                            "jobskills_mul": document.getElementById("skills_mul").value/100,
+                            "apt_mul": document.getElementById("apt_mul").value/100,
+                            "gitId_mul": document.getElementById("git_mul").value/100,
+                            "big5_mul": document.getElementById("big5_mul").value/100,
+                            "values_mul": document.getElementById("val_mul").value/100,
+                            "self_desc": document.getElementById("self_desc").value,
+                            "self_desc_mul": document.getElementById("self_desc_mul").value/100,
+                            "job_want_why": document.getElementById("job_want_why").value,
+                            "job_want_why_mul": document.getElementById("job_want_why_mul").value/100,
+                            "job_req_what": document.getElementById("job_req_what").value,
+                            "job_req_what_mul": document.getElementById("job_req_what_mul").value/100,
+                            "passion": document.getElementById("passion").value,
+                            "passion_mul": document.getElementById("passion_mul").value/100,
+                            "date_join": document.getElementById("doj").value,
+                            "date_join_mul": document.getElementById("doj_mul").value/100                        
+                        }
+                        var myHeaders = new Headers();
+                        myHeaders.append("Content-Type", "application/json");
+
+                        fetch("http://localhost:5000/admin/jobdetails/add", {
+                            method: 'POST',
+                            headers: myHeaders,
+                            body: JSON.stringify(jobData),
+                            redirect: 'follow'
+                        })
+                        .then((response) => {window.location.href = response.url})
+                        .catch(error => console.log('error', error));
+                    }
+                </script>    
+                <button type="submit" class="login-btn" onclick="event.preventDefault(); sendData();">Publish</button>
             </div>
         </form>
     </div>

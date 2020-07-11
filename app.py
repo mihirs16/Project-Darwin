@@ -77,9 +77,10 @@ def delay_delete (t, path):
 def newCandidate():
     resumeFile = flask.request.files['resumeFile']
     candyInfo = json.loads(flask.request.form['jsonInput'])
-    path = os.path.join(app.config["FILE_UPLOADS"], secure_filename(resumeFile.filename))
+    path = os.path.join(app.config["FILE_UPLOADS"], resumeFile.filename)
     resumeFile.save(path)
     print (":adding new candidate")
+    print (candyInfo)
     database.add_candidate({
         "jobId": str(candyInfo['jobid']),
         "cname": candyInfo['cname'],
@@ -92,7 +93,8 @@ def newCandidate():
         "job_want_why": candyInfo['job_want_why'],
         "job_req_what": candyInfo['job_req_what'],
         "passion": candyInfo['passion'],
-        "date_join": candyInfo['date_join']
+        "date_join": candyInfo['date_join'],
+        "apt": candyInfo['apt']
     }, path)
     print (":new candidate added")
     os.remove(path)
@@ -115,8 +117,6 @@ def getQues():
     }
     print (response)
     return flask.jsonify(response)
-     
-
 # -----------------------------------------------------
 
 # ---- admin services ---------------------------------
@@ -145,18 +145,13 @@ def applicants(jobid):
     return flask.render_template('job_applicants.html', jobid=jobid)
 
 @app.route('/admin/jobdetails/add', methods=['GET', 'POST'])
+@flask_login.login_required
 def jobdetails_add():
     if flask.request.method == 'POST':
-        print(flask.request.json)
+        jobData = flask.request.json
+        database.add_job(jobData)
         return flask.redirect(flask.url_for('billboard'))
     return flask.render_template('job_manage.html')
-
-@app.route('/admin/jobdetails/edit/<jobid>', methods=['GET', 'POST'])
-def jobdetails_edit(jobid):
-    if flask.request.method == 'POST':
-        print(flask.request.json)
-        return flask.redirect(flask.url_for('billboard'))
-    return flask.render_template('job_manage.html', jobid=jobid)
 
 @app.route('/data/admin/getCandidates/<jobid>')
 @flask_login.login_required

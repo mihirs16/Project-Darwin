@@ -74,7 +74,18 @@ function postConvo () {
     jsonInput.id = "jsonInput";
     jsonInput.name = "jsonInput";
     jsonInput.type = "text";
-    jsonInput.value = JSON.stringify({
+    jsonInput.style = "display: none;"
+
+    newDialogue = dialogueTemplate.cloneNode(true);
+    newDialogue.getElementsByClassName("dialogue user")[0].innerText = "Upload Resume\n\n";
+    uploadForm.appendChild(fileInput);
+    uploadForm.appendChild(jsonInput);
+    newDialogue.getElementsByClassName("dialogue user")[0].appendChild(uploadForm);
+    chatWindow.appendChild(newDialogue);
+}
+
+function sendData () {
+    candyData = JSON.stringify({
         "jobid": parseInt(document.getElementById("data").innerText),
         "cname": responses[1],
         "email": responses[2],
@@ -89,17 +100,8 @@ function postConvo () {
         "apt": _score,
         "date_join": responses[11],
     });
-    jsonInput.style = "display: none;"
-
-    newDialogue = dialogueTemplate.cloneNode(true);
-    newDialogue.getElementsByClassName("dialogue user")[0].innerText = "Upload Resume\n\n";
-    uploadForm.appendChild(fileInput);
-    uploadForm.appendChild(jsonInput);
-    newDialogue.getElementsByClassName("dialogue user")[0].appendChild(uploadForm);
-    chatWindow.appendChild(newDialogue);
-}
-
-function sendData () {
+    console.log(candyData);
+    document.getElementById('jsonInput').value = candyData;
     document.getElementById("send-data").submit();
 }
 

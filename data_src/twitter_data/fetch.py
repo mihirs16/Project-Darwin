@@ -367,6 +367,6 @@ raw
 - neuroticism
 '''
 
-print(twtScore('@cached_cadet'))
-print(twtScore('@wubbalubbadubdub')) # doesn't exist
-# print(get_insight(get_all_tweets_dic('@cached_cadet')))
+# print(twtScore('@cached_cadet'))
+# print(twtScore('@wubbalubbadubdub')) # doesn't exist
+# # print(get_insight(get_all_tweets_dic('@cached_cadet')))
