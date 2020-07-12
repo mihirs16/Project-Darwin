@@ -134,7 +134,7 @@ def admin():
             return flask.redirect(flask.url_for('billboard'))
     return flask.redirect(flask.url_for('admin'))
 
-@app.route('/billboard')
+@app.route('/admin/billboard')
 @flask_login.login_required
 def billboard():
     return flask.render_template('job_billboard.html')
