@@ -2,6 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -20,7 +22,7 @@
     <!-- Custom Js -->
     <script src="{{ url_for('static', filename='job_applicants.js') }}"></script>    
 </head>
-<body onload="loadCandidateList();">
+<body onload="loadCandidateList(); getJobStats(); loadView(0);">
     <!-- Meta Data -->
     <div id="meta" style="display: none;">
         {{ jobid }}
@@ -52,10 +54,10 @@
         <div class="row" style="height: 100%;">
             <div class="col">
                 <div id="sidebarin">
-                    <div class="sidebar-options" id="appl">
+                    <div class="sidebar-options" id="appl" onclick="loadView(0);">
                         All Applicants
                     </div>
-                    <div class="sidebar-options" id="dash">
+                    <div class="sidebar-options" id="dash" onclick="loadView(1);">
                         Dashboard
                     </div>
                 </div>
@@ -101,14 +103,67 @@
             </div>
         </div>
         <div id="dashboard">
-
+            <div class="plots">
+                <div class="plotwin">
+                    <span style="font-family: SFProDisplay;
+                    font-size: 41px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.2;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #1971c2;">1. Percentile</span>
+                    <div id="percentile" style="height: 700;">   
+                    </div>              
+                </div>
+                <div class="plotwin">
+                    <span style="font-family: SFProDisplay;
+                    font-size: 41px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.2;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #1971c2;">2. Skill</span>
+                    <div id="skill" style="height: 700;"> 
+                    </div>             
+                </div>
+                <div class="plotwin">
+                    <span style="font-family: SFProDisplay;
+                    font-size: 41px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.2;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #1971c2;">3. Date of Joining</span>
+                    <div id="doj" style="height: 700;">
+                    </div>             
+                </div>
+                <div class="plotwin">
+                    <span style="font-family: SFProDisplay;
+                    font-size: 41px;
+                    font-weight: 600;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 1.2;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #1971c2;">4. Years of Experience</span>
+                    <div id="yoe" style="height: 700;">
+                    </div>             
+                </div>
+            </div>
         </div>
         <form action="">
             <button class="btn edit">
                 EDIT JOB DETAILS
             </button>
             <button class="btn delete">
-                EDIT JOB DETAILS
+                DELETE JOB VACANCY
             </button>
         </form>
     </div>

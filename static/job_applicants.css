@@ -7,8 +7,19 @@
     background-image: linear-gradient(to top, #e7f5ff, #ffffff);
 }
 
-#applicants {
-    /* display: none; */
+.plots {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.plotwin {
+    margin: 50px;
+    width: 900px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
+    background-color: #ffffff;
+    padding: 25px;
 }
 
 #career-head {
@@ -101,8 +112,17 @@
 }
 
 #appl {
-    color: white;
-    background-color: #1971c2;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+#dash {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 }
 
 #all-applicants {

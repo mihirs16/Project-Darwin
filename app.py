@@ -4,6 +4,7 @@ import json
 import os
 import time
 
+import stats
 import flask
 import flask_login
 import pandas as pd
@@ -158,6 +159,37 @@ def jobdetails_add():
 def getCandidates(jobid):
     allCandidates = database.getAllCandidates(jobid)
     return flask.jsonify(allCandidates) 
+
+@app.route('/data/admin/getJobStats/<jobid>')
+# @flask_login.login_required
+def getJobStats(jobid):
+    allCandidates = database.getStats(jobid)
+    doj = [can["Date_Of_Joining"] for can in allCandidates]
+    ski = [can["Skill"] for can in allCandidates]
+    yoe = [can["Year_of_Experience"] for can in allCandidates]
+    ovr = [can["overall_score"] for can in allCandidates]
+    dfAllCan = pd.DataFrame(data = {'Date_Of_Joining': doj, 'Skill': ski, 'Year_of_Experience': yoe, 'overall_score': ovr}) 
+    ski_x, ski_y = stats.create_ski(dfAllCan)
+    plotData = {
+        "perc": {
+            "x": list(stats.create_perc(dfAllCan).index),
+            "y": [int(x) for x in list(stats.create_perc(dfAllCan).iloc[:, 0].values)]
+        },
+        "doj": {
+            "x": list(stats.create_doj(dfAllCan).index),
+            "y": [int(x) for x in list(stats.create_perc(dfAllCan).iloc[:, 0].values)]
+        },
+        "yoe": {
+            "x": [int(x) for x in list(stats.create_yoe(dfAllCan).iloc[:, 0].values)],
+            "y": [int(x) for x in list(stats.create_yoe(dfAllCan).iloc[:, 1].values)]
+        },
+        "ski": {
+            "x": [int(x) for x in ski_x],
+            "y": ski_y
+        }
+    }
+    print (plotData)
+    return json.dumps(plotData)
 
 @app.route('/logout')
 def logout():

@@ -239,7 +239,7 @@ def getAllJobs():
     return allJobs
 
 # return all candidates for a given jobId
-def getAllCandidates(id):
+def getAllCandidates (id):
     try:
         ibm_db_conn = ibm_db.connect(dsn, '', '')
         conn = ibm_db_dbi.Connection(ibm_db_conn)
@@ -274,7 +274,43 @@ def getAllCandidates(id):
     print ("connection closed")
     return allCandy
 
+# return all stats for a given jobId
+def getStats (id):
+    try:
+        ibm_db_conn = ibm_db.connect(dsn, '', '')
+        conn = ibm_db_dbi.Connection(ibm_db_conn)
+        cursor = conn.cursor()
+        print ("Connected to {0}".format(DB2_DB))
+    except:
+        print ("Couldn't Connect to Database")
+        return False
+
+    try:
+        q1 = "SELECT OVERALL_SCORE, DATE_JOIN, SKILLS, YOE FROM JOB_" + str(id)
+        cursor.execute(q1)
+        candyData = cursor.fetchall()
+        allCandy = []
+        for candy in candyData:
+            thisCandy = {
+                "overall_score": candy[0],
+                "Date_Of_Joining": candy[1],
+                "Skill": candy[2],
+                "Year_of_Experience": candy[3]
+            }
+            allCandy.append(thisCandy)
+    except:
+        print ('Error Querying Job Stats')
+        ibm_db.close(ibm_db_conn)
+        print ("connection closed")
+        return False
+    
+    print('fetched job stats')
+    ibm_db.close(ibm_db_conn)
+    print ("connection closed")
+    return allCandy
+
 # ---- mock functions -----------------------------------------------------------
+# print(getStats(2))
 # add_job({
     # 'jobrole': "BACKEND DEVELOPER",
     # 'location': "Delhi, India",
