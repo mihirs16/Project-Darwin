@@ -210,3 +210,23 @@
     color: #1864ab;
     opacity: 0.5;
 }
+
+#videotitle {
+    position: absolute; 
+    top: 0; 
+    left: 140px;
+    font-family: SFProDisplay;
+    font-size: 55px;
+    font-weight: bold;
+    line-height: 1.19;
+    color: #1971c2;
+}
+
+iframe {
+    position: absolute;
+    top: 100px;
+    left: 115px;
+    width: 80%;
+    height: 72%;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.37);
+}
