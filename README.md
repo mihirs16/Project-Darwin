@@ -1,4 +1,6 @@
-# Project-Darwin
+<img src="https://github.com/mihirs16/Project-Darwin/blob/master/static/Assets/Logo-w%20Name.svg" width=250>
+
+---
 The project aims to develop a prototype of a platform which can help streamline and scale up the
 hiring process by automating the steps of recruitment that involve accepting applications,
 gathering data and insights into the candidate pool, comparing candidates, ranking and
@@ -67,7 +69,7 @@ EXAMPLE_API_KEY=examplekeyvalue123
 ```
 python app.py
 ```
-* In your browser open http://localhost:5000 (or :{port-number} as specified by the Flask's development server)
+* In your browser open http://localhost:5000 (or `:{port-number}` as specified by the Flask's development server)
 
 ## Disclaimer
 Aforementioned Project Darwin is still an experimental prototype. However instances fit for specific use cases can be spawned and developed for your use. In order to contact us for such an endeavor please check out the contributors for this project. 
