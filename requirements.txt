@@ -166,7 +166,7 @@ srsly==1.0.2
 StackAPI==0.1.12
 tensorboard==1.14.0
 tensorboard-plugin-wit==1.6.0.post3
-tensorflow==1.14.0
+tensorflow==1.15.2
 tensorflow-cpu==2.2.0
 tensorflow-estimator==1.14.0
 tensorflow-hub==0.7.0
