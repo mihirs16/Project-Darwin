@@ -22,7 +22,7 @@
     <!-- Custom Js -->
     <script src="{{ url_for('static', filename='job_applicants.js') }}"></script>    
 </head>
-<body onload="loadCandidateList(); getJobStats(); loadView(0);">
+<body onload="loadCandidateList(); loadView(0);">
     <!-- Meta Data -->
     <div id="meta" style="display: none;">
         {{ jobid }}
@@ -69,15 +69,24 @@
         </div>
     </div>
 
+    <!-- Select Candidates -->
+    <div id="overlay">
+        <div id="mailpanel">
+            <h2>Send Mail To:</h2>
+            <input type="number" id="emailqt" min="0" required>
+            <input type="submit" onclick="event.preventDefault(); sendMails();" class="btn select" style="position: fixed; top: 55%; left: calc(50% - 150px)">
+        </div>
+    </div>
+
     <!-- Applicants -->
     <div class="container" id="window">
         <div id="applicants">
             <div class="row mt-5 p-3">
                 <div class="col-7">
-                    <h1 id="career-head">Frontend Developer</h1>
+                    <h1 id="career-head">{{ jobname }}</h1>
                 </div>
                 <div class="col-5">
-                    <button type="submit" class="btn select">SELECT TOP CANDIDATES</button>
+                    <button id="selecttop" class="btn select">SELECT TOP CANDIDATES</button>
                 </div>
             </div>
             <div class="container" id="all-applicants">

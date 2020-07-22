@@ -64,7 +64,7 @@ def create_yoe (df):
     return df
 
 def create_ski (df):
-    [print(x) for x in df['Skill'].values]
+    # [print(x) for x in df['Skill'].values]
     df['Skill'] = [x.split(", ") for x in df['Skill'].values]
     from sklearn.preprocessing import MultiLabelBinarizer
     mlb = MultiLabelBinarizer()
@@ -72,7 +72,9 @@ def create_ski (df):
     mlb.classes_
     ski = pd.DataFrame(mlb.fit_transform(df['Skill']), columns=list(mlb.classes_))
     num_skills = []
+    # [print(ski[col].value_counts()[1]) for col in ski.columns]
     for col in list(ski.columns):
-        num_skills.append(ski[col].value_counts().values[1])
+        # print(ski[col].value_counts().values)
+        num_skills.append(ski[col].value_counts()[1])
 
     return num_skills, list(ski.columns)

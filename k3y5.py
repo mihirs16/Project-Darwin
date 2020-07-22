@@ -26,6 +26,7 @@ try:
     COS_AUTH_ENDPOINT = str(os.environ.get('COS_AUTH_ENDPOINT'))
     COS_RESOURCE_CRN = str(os.environ.get('COS_RESOURCE_CRN'))
     COS_SERVICE_CRN = str(os.environ.get('COS_SERVICE_CRN'))
+    GMAIL_PWD = str(os.environ.get('GMAIL_PWD'))
 except:
     ADMIN_KEY = str(os.environ.get("ADMIN_KEY"))
     ADMIN_USERNAME = str(os.environ.get("ADMIN_USERNAME"))
@@ -46,3 +47,4 @@ except:
     COS_AUTH_ENDPOINT = str(os.environ.get('COS_AUTH_ENDPOINT'))
     COS_RESOURCE_CRN = str(os.environ.get('COS_RESOURCE_CRN'))
     COS_SERVICE_CRN = str(os.environ.get('COS_SERVICE_CRN'))
+    GMAIL_PWD = str(os.environ.get('GMAIL_PWD'))

@@ -3,6 +3,7 @@ import database
 import json
 import os
 import time
+import smtplib
 
 import stats
 import flask
@@ -11,7 +12,7 @@ import pandas as pd
 from ast import literal_eval
 from flask_cors import CORS
 from werkzeug.utils import secure_filename
-from k3y5 import ADMIN_USERNAME, ADMIN_PASSWORD, ADMIN_KEY
+from k3y5 import ADMIN_USERNAME, ADMIN_PASSWORD, ADMIN_KEY, GMAIL_PWD
 
 app = flask.Flask(__name__)
 login_manager = flask_login.LoginManager()
@@ -143,7 +144,11 @@ def billboard():
 @app.route('/applicants/<jobid>')
 @flask_login.login_required
 def applicants(jobid):
-    return flask.render_template('job_applicants.html', jobid=jobid)
+    jobDet = database.getAllJobs()
+    # print(jobDet)
+    # print(jobDet[int(jobid)-1]['role'])
+    jobname = jobDet[int(jobid)-1]['role']
+    return flask.render_template('job_applicants.html', jobid=jobid, jobname=jobname)
 
 @app.route('/admin/jobdetails/add', methods=['GET', 'POST'])
 @flask_login.login_required
@@ -161,9 +166,10 @@ def getCandidates(jobid):
     return flask.jsonify(allCandidates) 
 
 @app.route('/data/admin/getJobStats/<jobid>')
-# @flask_login.login_required
+@flask_login.login_required
 def getJobStats(jobid):
     allCandidates = database.getStats(jobid)
+    # print(allCandidates)
     doj = [can["Date_Of_Joining"] for can in allCandidates]
     ski = [can["Skill"] for can in allCandidates]
     yoe = [can["Year_of_Experience"] for can in allCandidates]
@@ -190,6 +196,30 @@ def getJobStats(jobid):
     }
     print (plotData)
     return json.dumps(plotData)
+
+@app.route('/sendEmails', methods=['POST'])
+# @flask_login.login_required
+def sendEmails():
+    # print(flask.request.json['emails']) 
+    mailList = flask.request.json['emails']
+    for mail in mailList:
+        MAIL_USER_ID = "mihirs16@gmail.com"
+        SUBJECT = "Level Up!"
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.ehlo()
+        server.starttls()
+        server.login(MAIL_USER_ID, GMAIL_PWD)
+
+        TEXT = "Congratulations! You have made it to the next round of interviews. We, at Blueprint, are eagerly looking forward to meet you."
+
+        BODY = '\r\n'.join(['To: %s' % mail,
+                'From: %s' % MAIL_USER_ID,
+                'Subject: %s' % SUBJECT,
+                '', TEXT])
+
+        server.sendmail(MAIL_USER_ID, [mail], BODY)
+    print ('chat mailed')
+    return 'ok'
 
 @app.route('/logout')
 def logout():
