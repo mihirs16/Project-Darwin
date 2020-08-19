@@ -9,7 +9,7 @@ function spawnJobs (results) {
             console.log(i.toString() + " card")
             jobCardTemplate = document.getElementsByClassName('col m-3 p-3 jobcard')[0];
             newJobCard = jobCardTemplate.cloneNode(true);
-            href = "http://localhost:5000/darwin/" + results[i]['id'].toString();
+            href = "https://project-darwin.azurewebsites.net/darwin/" + results[i]['id'].toString();
             newJobCard.setAttribute("onclick", "location.href='"+href+"'");
             newJobCard.getElementsByClassName("jobtitle")[0].innerText = results[i]['role'];
             newJobCard.getElementsByClassName("joblocation")[0].innerText = results[i]['loc'].split(", ").join(" | ");
@@ -30,7 +30,7 @@ function spawnJobs (results) {
             console.log(i.toString() + " card")
             jobCardTemplate = document.getElementsByClassName('col m-3 p-3 jobcard')[0];
             newJobCard = jobCardTemplate.cloneNode(true);
-            href = "http://localhost:5000/darwin/" + results[i]['id'].toString();
+            href = "https://project-darwin.azurewebsites.net/darwin/" + results[i]['id'].toString();
             newJobCard.setAttribute("onclick", "location.href='"+href+"'");
             newJobCard.getElementsByClassName("jobtitle")[0].innerText = results[i]['role'];
             newJobCard.getElementsByClassName("joblocation")[0].innerText = results[i]['loc'].split(", ").join(" | ");
@@ -45,7 +45,7 @@ function spawnJobs (results) {
 
 function getAllJobs () {
     console.log("Fetching");
-    fetch ("http://localhost:5000/data/getAllJobs", {method: 'GET'})
+    fetch ("https://project-darwin.azurewebsites.net/data/getAllJobs", {method: 'GET'})
     .then (response => response.json ())
     .then (result => spawnJobs (result))
     .catch (error => console.log ('error', error));

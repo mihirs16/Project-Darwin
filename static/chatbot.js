@@ -60,7 +60,7 @@ function postConvo () {
     chatWindow = document.getElementById('chatwindow');
     dialogueTemplate = document.getElementsByClassName("row mt-2 user_dialogue")[0];
     uploadForm = document.createElement('form');
-    uploadForm.action = "http://localhost:5000/data/newCandidate"
+    uploadForm.action = "https://project-darwin.azurewebsites.net/data/newCandidate"
     uploadForm.method = "POST";
     uploadForm.enctype = "multipart/form-data";
     uploadForm.id = "send-data"
@@ -109,7 +109,7 @@ function takeApt () {
     document.getElementById("overlay").style.display = "flex";
     que = document.getElementById("questions");
     
-    fetch("http://localhost:5000/data/getQuestions", { method: 'GET'})
+    fetch("https://project-darwin.azurewebsites.net/data/getQuestions", { method: 'GET'})
     .then(response => response.json())
     .then(result => {
         _test = result;

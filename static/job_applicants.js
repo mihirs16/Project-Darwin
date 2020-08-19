@@ -33,7 +33,7 @@ function displayCandidateList (result) {
 function loadCandidateList () {
     jobId = parseInt(document.getElementById("meta").innerText);
     
-    fetch("http://localhost:5000/data/admin/getCandidates/" + jobId.toString(), { method: 'GET' })
+    fetch("https://project-darwin.azurewebsites.net/data/admin/getCandidates/" + jobId.toString(), { method: 'GET' })
     .then(response => response.json())
     .then((result) => {
         displayCandidateList(result);
@@ -47,7 +47,7 @@ function loadCandidateList () {
 function getResume (id) {
     jobId = parseInt(document.getElementById("meta").innerText);
     key = jobId.toString() + "_" + id.toString();
-    window.open("http://localhost:5000/data/getResume/" + key.toString())
+    window.open("https://project-darwin.azurewebsites.net/data/getResume/" + key.toString())
 }
 
 function drawPercentile (obj) {
@@ -107,7 +107,7 @@ function getJobStats () {
         redirect: 'follow'
     };
       
-    fetch("http://localhost:5000/data/admin/getJobStats/" + jobId.toString(), requestOptions)
+    fetch("https://project-darwin.azurewebsites.net/data/admin/getJobStats/" + jobId.toString(), requestOptions)
     .then(response => response.json())
     .then((result) => drawPlots(result))
     .catch(error => console.log('error', error));
@@ -132,7 +132,7 @@ function sendMails () {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
-    fetch("http://localhost:5000/sendEmails", {
+    fetch("https://project-darwin.azurewebsites.net/sendEmails", {
             method: 'POST',
             headers: myHeaders,
             body: JSON.stringify({"emails":allEmails})

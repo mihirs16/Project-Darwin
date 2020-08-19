@@ -246,7 +246,7 @@
                         var myHeaders = new Headers();
                         myHeaders.append("Content-Type", "application/json");
 
-                        fetch("http://localhost:5000/admin/jobdetails/add", {
+                        fetch("https://project-darwin.azurewebsites.net/admin/jobdetails/add", {
                             method: 'POST',
                             headers: myHeaders,
                             body: JSON.stringify(jobData),
