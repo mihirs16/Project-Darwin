@@ -14,8 +14,8 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 # ------------------------------------------------------------------
 # nltk downloads
-# nltk.download('stopwords')
-# nltk.download('wordnet')
+nltk.download('stopwords')
+nltk.download('wordnet')
 
 # text cleaning function w/ lemmatization
 def clean_text(text):
