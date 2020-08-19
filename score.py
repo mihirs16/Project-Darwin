@@ -1,8 +1,8 @@
 # ----- importing configuration ------------------------------------
 import os
 import sys
-sys.path.insert(1, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data_src\\git_data\\'))
-sys.path.insert(2, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data_src\\twitter_data\\'))
+# sys.path.insert(1, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data_src\\git_data\\'))
+# sys.path.insert(2, os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data_src\\twitter_data\\'))
 # ----- imports ----------------------------------------------------
 import github_api as git
 import fetch as twt

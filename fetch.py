@@ -1,6 +1,6 @@
 import os
 import sys
-sys.path.insert(1, os.path.join(os.path.dirname(os.path.realpath(__file__)), '..\\..\\'))
+# sys.path.insert(1, os.path.join(os.path.dirname(os.path.realpath(__file__)), '..\\..\\'))
 import time
 from pandas import DataFrame
 import tweepy

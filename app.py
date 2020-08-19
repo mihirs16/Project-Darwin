@@ -232,17 +232,18 @@ def unauthorized_handler():
 # -------------------------------------------------------
 
 if __name__ == "__main__":
-    # for hot reload and tracking static files and templates
-    from os import path, walk
+    # # for hot reload and tracking static files and templates
+    # from os import path, walk
 
-    extra_dirs = ['templates/', 'static/']
-    extra_files = extra_dirs[:]
-    for extra_dir in extra_dirs:
-        for dirname, dirs, files in walk(extra_dir):
-            for filename in files:
-                filename = path.join(dirname, filename)
-                if path.isfile(filename):
-                    extra_files.append(filename)
+    # extra_dirs = ['templates/', 'static/']
+    # extra_files = extra_dirs[:]
+    # for extra_dir in extra_dirs:
+    #     for dirname, dirs, files in walk(extra_dir):
+    #         for filename in files:
+    #             filename = path.join(dirname, filename)
+    #             if path.isfile(filename):
+    #                 extra_files.append(filename)
 
-    # flask app run
-    app.run(debug=True, extra_files=extra_files)
+    # # flask app run
+    # app.run(debug=False, extra_files=extra_files)
+    app.run()
