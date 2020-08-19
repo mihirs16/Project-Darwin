@@ -65,7 +65,7 @@ def getResume(id):
     database.resume_vault.download_item(id, os.path.join(os.path.join(app.root_path, app.config['FILE_UPLOADS']), id+str('.pdf')))
     del_thread = threading.Thread(target=delay_delete, args=(5, os.path.join(os.path.join(os.path.join(app.root_path, app.config['FILE_UPLOADS']), id+str('.pdf')))))
     del_thread.start()
-    return  flask.send_from_directory(directory=os.path.join(app.root_path, app.config['FILE_UPLOADS']), filename=id+str('.pdf'))
+    return flask.send_from_directory(directory=os.path.join(app.root_path, app.config['FILE_UPLOADS']), filename=id+str('.pdf'))
 
 def delay_delete (t, path):
     print ("started")
@@ -201,25 +201,28 @@ def getJobStats(jobid):
 # @flask_login.login_required
 def sendEmails():
     # print(flask.request.json['emails']) 
-    mailList = flask.request.json['emails']
-    for mail in mailList:
-        MAIL_USER_ID = "mihirs16@gmail.com"
-        SUBJECT = "Level Up!"
-        server = smtplib.SMTP('smtp.gmail.com', 587)
-        server.ehlo()
-        server.starttls()
-        server.login(MAIL_USER_ID, GMAIL_PWD)
+    try:
+        mailList = flask.request.json['emails']
+        for mail in mailList:
+            MAIL_USER_ID = "mihirs16@gmail.com"
+            SUBJECT = "Level Up!"
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.ehlo()
+            server.starttls()
+            server.login(MAIL_USER_ID, GMAIL_PWD)
 
-        TEXT = "Congratulations! You have made it to the next round of interviews. We, at Blueprint, are eagerly looking forward to meet you."
+            TEXT = "Congratulations! You have made it to the next round of interviews. We, at Blueprint, are eagerly looking forward to meet you."
 
-        BODY = '\r\n'.join(['To: %s' % mail,
-                'From: %s' % MAIL_USER_ID,
-                'Subject: %s' % SUBJECT,
-                '', TEXT])
+            BODY = '\r\n'.join(['To: %s' % mail,
+                    'From: %s' % MAIL_USER_ID,
+                    'Subject: %s' % SUBJECT,
+                    '', TEXT])
 
-        server.sendmail(MAIL_USER_ID, [mail], BODY)
-    print ('chat mailed')
-    return 'ok'
+            server.sendmail(MAIL_USER_ID, [mail], BODY)
+        print ('chat mailed')
+        return 'ok'
+    except Exception as e:
+        return str(e)
 
 @app.route('/logout')
 def logout():
