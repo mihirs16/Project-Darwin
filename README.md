@@ -7,7 +7,12 @@ gathering data and insights into the candidate pool, comparing candidates, ranki
 shortlisting all applicants. Such a platform could prove to be useful in carrying out large scale
 recruitment campaigns by narrowing down the candidate pool for any specific job posting.<br>
 <br>
-Project Demo Video: [Introducing - Project Darwin | By Team Blueprint](https://youtu.be/dAfU6YDgf8w)
+![](https://img.shields.io/github/stars/mihirs16/Project-Darwin?style=for-the-badge)
+![](https://img.shields.io/github/forks/mihirs16/Project-Darwin?color=green&style=for-the-badge)
+<br><br>
+Project Demo Video: [Introducing - Project Darwin | By Team Blueprint](https://youtu.be/dAfU6YDgf8w)<br><br>
+![](https://img.shields.io/youtube/likes/dAfU6YDgf8w?label=Youtube%20Likes&style=for-the-badge)
+![](https://img.shields.io/youtube/views/dAfU6YDgf8w?color=blue&label=Youtube%20Views&style=for-the-badge)
 
 ## Built With
 | Software | Version |
