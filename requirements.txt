@@ -36,7 +36,7 @@ pickleshare==0.7.5
 plotly==4.9.0
 prompt-toolkit==3.0.5
 Pygments==2.6.1
-PyJWT==1.7.1
+PyJWT==2.4.0
 PySocks==1.7.1
 python-dateutil==2.8.1
 python-dotenv==0.14.0
